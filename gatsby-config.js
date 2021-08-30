@@ -5,3 +5,7 @@ module.exports = {
   },
   plugins: ["gatsby-plugin-emotion"],
 };
+
+module.exports = {
+  pathPrefix: "/scenario-planning",
+}
