@@ -6,10 +6,13 @@ import logo from "../assets/branding/MAPC-MetroCommon-White-RGB.png";
 import background from "../assets/background-blur-out-focus-bokeh-traffic-jams-road-repairs-accidents-red-brake-lights-stopped-cars-scaled-panorama.jpg"
 import { fonts, themeColors } from "../utils/theme";
 import { List } from "phosphor-react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 
 const homePage = css`
-    height: 80vh;
+    height: 75vh;
     background-image: url(${background});
     background-size: cover; 
     position: relative;
@@ -26,7 +29,7 @@ const headerContent = css `
     .header-content-right {
         width: 50%;
         align-items: center;
-        > a > img {height: .8rem;}
+        > a > img {height: 1rem;}
     }
 
     .header-content-left {
@@ -44,18 +47,25 @@ const heroOverlay = css`
     height: 55vh;
     background: rgb(240,239,231);
     background: linear-gradient(90deg, rgba(240,239,231,1) 0%, rgba(240,239,231,1) 50%, rgba(255,255,255,0) 100%); 
+    z-index: -1;
+`;
+
+const homePageColorBlock = css`
+    height: 15vh;
+    background: ${themeColors.indigo};
+    z-index: -1;
 `;
 
 const homePageContent = css`
-    height: 35vh;
-
-    background: ${themeColors.indigo};
+    top: 0;
+    position: absolute;
+    z-index: 0;
 `;
 
 const titleStyle = css`
     position: absolute;
-    min-width: 40%;
-    margin: 20vh 10vw;
+    min-width: 40rem;
+    margin: 20vh 15vw 0;
     padding: 1.5rem;
     color: white;
     background: ${themeColors.indigo};
@@ -79,8 +89,8 @@ const titleStyle = css`
 
 const listStyle = css`
     position: absolute;
-    min-width: 40%;
-    margin: 32vh 5vw;
+    min-width: 40rem;
+    margin: 30vh 10vw 0;
     padding: 1.5rem;
     color: black;
     background: white;
@@ -103,13 +113,26 @@ const listStyle = css`
 const Header = () => {
     return (
         <div>
+            {/* <Container fluid>
+                <Row>
+                    <Col><img src={logo} alt="MetroCommon by 2050" height="1rem" /></Col>
+                    <Col><a href="/"><List size={36} /></a></Col>
+                </Row>
+            </Container> */}
             <div className="home-page" css={homePage}>
                 <div className="header-content" css={headerContent}>
-                    <div className="header-content-right"><a href="/"><img src={logo} alt="MetroCommon by 2050" /></a></div>
+                    <div className="header-content-right">
+                        <a href="/"><img src={logo} alt="MetroCommon by 2050" /></a>
+                    </div>
                     <div className="header-content-left">
-                        <a href="">Language Dropdown</a>
                         <a href="/"><List size={36} /></a>
                     </div>
+                </div>
+                <div className="hero-overlay" css={heroOverlay}>
+                </div>
+                <div className="home-page-color-block" css={homePageColorBlock}>
+                </div>
+                <div className="home-page-content" css={homePageContent}>
                     <div className="title" css={titleStyle}>
                         <h1>Scenario Planning</h1>
                         <h3>Planning For An Uncertain Future</h3>
@@ -127,10 +150,7 @@ const Header = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="hero-overlay" css={heroOverlay}>
-                </div>
-                <div className="home-page-content" css={homePageContent}>
-                </div>
+
                 
             </div>
         </div>

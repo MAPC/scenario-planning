@@ -5,6 +5,8 @@ import { css, jsx } from '@emotion/react';
 import { themeColors } from '../utils/theme';
 import Header from '../components/Header';
 import About from '../components/About';
+import Goals from '../components/Goals';
+import Banner from '../components/Banner'
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 
@@ -145,6 +147,8 @@ const IndexPage = () => {
     `}</style>
       <Header />
       <About />
+      <Goals />
+      <Banner />
       <Main />
       <Footer />
       
