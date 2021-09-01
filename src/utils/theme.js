@@ -1,5 +1,6 @@
 import { css, jsx } from '@emotion/react';
-import background from "../assets/background-blur-out-focus-bokeh-traffic-jams-road-repairs-accidents-red-brake-lights-stopped-cars-scaled-panorama.jpg"
+import background from "../assets/background-blur-out-focus-bokeh-traffic-jams-road-repairs-accidents-red-brake-lights-stopped-cars-scaled-panorama.jpg";
+import key1bg from "../assets/Image20@2x.png";
 
 const fonts = {
   calibre: "'Calibre', sans-serif",
@@ -222,4 +223,51 @@ const sectionStyle1 = css`
   }
 `;
 
-export { fonts, themeColors, headerStyle, landingStyle, titleCardContainer, titleCardStyle, layoutStyle, aboutStyle, sectionStyle1 };
+const liTitle = css`
+  .accordion-item {
+    color: red;
+  }
+`;
+
+const sectionStyle2 = css`
+  width: 100vw;
+  height: 100vh;
+  // margin: 10rem 14rem;
+  padding: 0;
+  position: relative;
+
+  .section-content-2 {
+    h3 {
+      font-size: 44px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      margin: 10rem 0 6rem 14rem;
+    }
+
+    p {
+      font-family: ${fonts.swiftNeueLtPro};
+    }
+  }
+    
+`;
+
+const keyStyle = css`
+  height: 100vh;
+  width: 100%;
+  background-image: url(${key1bg});
+`;
+
+export { 
+  fonts, 
+  themeColors, 
+  headerStyle, 
+  landingStyle, 
+  titleCardContainer, 
+  titleCardStyle, 
+  layoutStyle, 
+  aboutStyle, 
+  sectionStyle1, 
+  liTitle,
+  sectionStyle2,
+  keyStyle 
+};

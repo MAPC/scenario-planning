@@ -7,11 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Landing from '../components/Landing';
 import About from '../components/About';
 import Takeaways from '../components/Takeaways';
+import Examined from '../components/Examined';
 import Goals from '../components/Goals';
 import Slides from '../components/Slides';
 import Banner from '../components/Banner';
 import Main from '../components/Main';
-import Footer from '../components/Footer';
+import FooterComponent from '../components/Footer';
 
 const IndexPage = () => {
   return (
@@ -25,11 +26,12 @@ const IndexPage = () => {
       <Landing />
       <About />
       <Takeaways />
+      <Examined />
       <Slides />
       <Goals />
       <Banner />
-      <Main />
-      <Footer />
+      {/* <Main /> */}
+      <FooterComponent />
       
     </main>
   )
