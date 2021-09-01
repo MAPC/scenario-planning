@@ -1,6 +1,7 @@
 import { css, jsx } from '@emotion/react';
 import background from "../assets/background-blur-out-focus-bokeh-traffic-jams-road-repairs-accidents-red-brake-lights-stopped-cars-scaled-panorama.jpg";
 import key1bg from "../assets/Image20@2x.png";
+import triangleAccordion from "../assets/triangle-accordion.png";
 
 const fonts = {
   calibre: "'Calibre', sans-serif",
@@ -10,10 +11,12 @@ const fonts = {
 const themeColors = {
   indigo: '#101436',
   teal: '#4CC1B9',
+  lightTeal: '#ebf6f7',
+  lightGray: '#D8D8D8',
   white: '#FFFFFF',
-  fontGray: '#545454',
   black: '#000000',
-  leaf: '#03332D'
+  leaf: '#03332D',
+  fontGray: '#545454'
 };
 
 const headerStyle = css`
@@ -203,12 +206,36 @@ const sectionStyle1 = css`
       margin-bottom: 4rem;
     }
 
-    li {
-      padding: 20px 6rem 20px 0;
-      margin: 0 20px;
+    .accordion {
+      
+    }
+
+    .accordion-item .accordion-button {
+      padding: 18px 0;
+      border-bottom: 1px ${themeColors.lightGray} solid;
+      color: ${themeColors.leaf};
+      transition: all 0.2s ease-in-out;
+    }
+
+    .accordion-button::after {
+      background-image: url(${triangleAccordion});
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: ${themeColors.black};
+      background-color: ${themeColors.lightTeal};
+      padding: 18px 1.25rem;
+      // transition: all 0.2s ease-in-out;
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+
+    .accordion-header {
       font-size: 16px;
       font-family: ${fonts.swiftNeueLtPro};
-      border-bottom: 1px lightgray solid;
+      color: ${themeColors.leaf};
     }
 
   }

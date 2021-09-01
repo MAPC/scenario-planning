@@ -1,8 +1,7 @@
 /** @jsx jsx */
 
 import * as React from "react";
-import { css, jsx } from '@emotion/react';
-import { themeColors } from '../utils/theme';
+import { jsx } from '@emotion/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Landing from '../components/Landing';
 import About from '../components/About';
@@ -32,7 +31,6 @@ const IndexPage = () => {
       <Banner />
       {/* <Main /> */}
       <FooterComponent />
-      
     </main>
   )
 }
