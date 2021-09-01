@@ -1,4 +1,5 @@
 import { css, jsx } from '@emotion/react';
+import background from "../assets/background-blur-out-focus-bokeh-traffic-jams-road-repairs-accidents-red-brake-lights-stopped-cars-scaled-panorama.jpg"
 
 const fonts = {
   calibre: "'Calibre', sans-serif",
@@ -6,100 +7,219 @@ const fonts = {
 };
 
 const themeColors = {
-  winterSky: '#3b66b0',
-  gossamer: '#f2f5fb',
-  bayBlue: '#233069',
   indigo: '#101436',
-  glass: '#0097c4',
-  sky: '#92c9ed',
-  clearWater: '#67cbe4',
+  teal: '#4CC1B9',
   white: '#FFFFFF',
   fontGray: '#545454',
-  fontLightGray: '#757575',
   black: '#000000',
-  warmGray: '#E9E9E9',
-  // warmGrayTransparent: '#f7f7f7f5',
-  warmGrayTransparent: '#fbfdff',
-  gold: '#ffc800',
-  quintile1: '#e39374',
-  quintile2: '#c98bc9',
-  quintile3: '#3ec9b7',
-  quintile4: '#5445ff',
-  quintile5: '#00006e'
+  leaf: '#03332D'
 };
 
-const marginStyle = css`
-  margin: 0;
-  padding: 0;
-  max-width: 116.6rem;
+const headerStyle = css`
+  height: 120px;
+  background-color: ${themeColors.leaf};
+  .row {
+    height: 100%;
+    margin: auto 6rem;
+  }
+  .header-left {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    img {
+      max-height: 20px;
+    }
+  }
+  .header-right {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    a {
+      text-decoration: none;      
+      color: ${themeColors.white};
+      font-family: ${fonts.swiftNeueLtPro};
+      font-size: 16px;
+      margin: 0 20px;
+    }
+  }
 `;
 
-const aboutPageStyle = css`
-  width: 100vw;
-  height: 100vh;
+const landingStyle = css`
+  height: 32rem;
+  padding: 0;
+  background-image: url(${background});
+  background-size: cover;
+
+  .hero-overlay {
+    height: 100%;
+    background: rgb(240,239,231);
+    background: linear-gradient(90deg, rgba(240,239,231,1) 0%, rgba(240,239,231,1) 50%, rgba(255,255,255,0) 100%); 
+    z-index: -1;
+  }
+
+`;
+
+const titleCardContainer = css`
   position: absolute;
-  font-family: ${fonts.calibre};
+  margin: 8rem 6rem 0;
+`;
 
-  header {
-    width: 85%;
-    max-width: 850px;
-    padding: 25px 0;
-    margin: 0 auto;
-
-    img {
-      width: 50px; 
-      height: auto;
-    } 
-
-    a {
-      float: right; 
-      top: 12px;
-
-      font-size: 18px;
-      transition: 0.2s ease-in-out;
+const titleCardStyle = css `
+  .title-card {
+    position: absolute;
+    min-width: 47rem;
+    margin: 0 8rem;
+    padding: 1.5rem 3rem;
+    color: white;
+    background: ${themeColors.leaf};
+    z-index: 2;
+    > h1 {
+        font-size: 60px;
+        font-family: ${fonts.calibre};
+        font-weight: 200;
+        padding: 0;
+        margin: 0;
+    }
+    > h3 {
+        font-size: 20px;
+        font-family: ${fonts.calibre};
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 10px 20px;
     }
   }
 
-  a {
-    text-decoration: none;
-    color: ${themeColors.winterSky};
-    &:hover {
-      color: ${themeColors.sky}; 
-    }
+  .subtitle-card-bg {
+    position: absolute;
+    min-width: 47rem;
+    min-height: 21rem;
+    margin: 4rem 0;
+    background: white;
+    z-index: 1;
   }
 
-  main {
-    width: 85%;
-    max-width: 700px;
-    min-height: 95vh;
-    margin: 0 auto;
-    padding: 20px 0 80px;
+  .subtitle-card-text {
+    position: absolute;
+    min-width: 47rem;
+    margin: 4rem 0;
+    color: black;
+    background: none;
+    z-index: 2;
+    > ul {
+        margin: 7.25rem 6rem 3rem 11rem;
+        padding: 0;
+        font-size: 14px;
+        font-family: ${fonts.calibre};
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        list-style: none;
+        z-index: 3;
+    }
+    > ul > li {
+        margin: 8px 0;
+        img.triangle {
+          width: 20px;
+        }
+        img.dots {
+          height: 2px;
+          margin-right: 8px;
+        }
+    }
+  }
+`;
 
+const layoutStyle = css`
+
+`;
+
+const aboutStyle = css`
+  width: 100%;
+  margin: 0;
+  padding-top: 12rem;
+  height: auto;
+  position: relative;
+  color: ${themeColors.white};
+  background: ${themeColors.leaf};
+
+  .line {
+    width: 21rem;
+    margin-top: 12px;
+    position: absolute;
+  }
+
+  .about-content {
+    padding: 0 22rem 10rem;
     h3 {
-      color: ${themeColors.black}
+      font-size: 24px;
+      font-family: ${fonts.calibre};
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin: 0 0 24px;
     }
 
     p {
-      color: ${themeColors.fontLightGray}
+      font-family: ${fonts.swiftNeueLtPro};
+      font-size: 16px;
     }
-
-    @include media('medium') { width: 92%; }
-  }
-
-  h1 {
-    display: inline-block;
-    margin-bottom: 40px;
-    font-size: 34px;
-    color: ${themeColors.indigo};
-    border-bottom: 6px solid ${themeColors.glass};
-  }
-
-  footer {
-    padding: 15px;
-    text-align: right;
-    background: ${themeColors.indigo};
-    img { width: 80px; }
   }
 `;
 
-export { fonts, themeColors, marginStyle, aboutPageStyle };
+const sectionStyle1 = css`
+  width: 100%;
+  margin: 0;
+  height: auto;
+  position: relative;
+  
+  .section-content {
+    width: 80%;
+    padding: 10rem 4rem 10rem 14rem;
+    
+    h3 {
+      font-size: 44px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      margin: 15px 0;
+    }
+
+    p {
+      font-family: ${fonts.swiftNeueLtPro};
+    }
+
+    .teal-text {
+      color: ${themeColors.teal};
+    }
+
+    ul {
+      width: 100%;
+      list-style: none;
+      margin-bottom: 4rem;
+    }
+
+    li {
+      padding: 20px 6rem 20px 0;
+      margin: 0 20px;
+      font-size: 16px;
+      font-family: ${fonts.swiftNeueLtPro};
+      border-bottom: 1px lightgray solid;
+    }
+
+  }
+
+  .section-images {
+    padding: 10rem 0;
+
+    .triangle-large {
+      width: 30rem;
+    }
+
+  }
+`;
+
+export { fonts, themeColors, headerStyle, landingStyle, titleCardContainer, titleCardStyle, layoutStyle, aboutStyle, sectionStyle1 };
