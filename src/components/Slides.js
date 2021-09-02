@@ -38,7 +38,7 @@ const contentPage = css`
 const Slides = () => {
     return (
         <div className="content-container" css={contentContainer}>
-            <iframe src="https://slides.com/mapc/deck-9a8a6e/embed?byline=hidden&share=hidden" width="100%" height="1000" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://slides.com/mapc/deck-9a8a6e/embed?byline=hidden&share=hidden" width="100%" height="1000" scrolling="yes" frameborder="0" ></iframe>
         </div>
     )
 }

@@ -281,7 +281,34 @@ const sectionStyle2 = css`
 const keyStyle = css`
   height: 100vh;
   width: 100%;
-  background-image: url(${key1bg});
+
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-inner {
+
+  }
+
+  .carousel-item {
+    width: 100%;
+    padding: 0 15%;
+  }
+
+  .carousel-caption {
+    color: black;
+  }
+
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  // targets color of indicator buttons
+  .carousel-indicators [data-bs-target] {
+    height: 6px;
+    background-color: ${themeColors.leaf};
+  }
 `;
 
 export { 

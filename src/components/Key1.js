@@ -2,11 +2,19 @@
 
 import * as React from "react";
 import { css, jsx } from '@emotion/react';
-import { sectionStyle1, keyStyle } from "../utils/theme";
+import { sectionStyle1, keyStyle, themeColors } from "../utils/theme";
 import topImage from "../assets/Mask-Group-2@2x.png";
 import bottomImage from "../assets/Mask-Group-3@2x.png";
 import triangleRight1 from "../assets/triangle-right1.png";
 import triangleRight2 from "../assets/triangle-right2.png";
+import demographics0 from "../assets/key1/demographics0.png";
+import demographics1 from "../assets/key1/demographics1.jpg";
+import demographics2 from "../assets/key1/demographics2.png";
+import demographics3 from "../assets/key1/demographics3.png";
+import demographics4 from "../assets/key1/demographics4.png";
+import demographics5 from "../assets/key1/demographics5.png";
+import demographics6 from "../assets/key1/demographics6.png";
+import key1bg from "../assets/Image22@2x.png"
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -14,45 +22,108 @@ import Carousel from "react-bootstrap/Carousel";
 
 const Key1 = () => {
 
+    const slide1 = css`
+        height: 100%;
+        width: 100%;
+        background-color: peachpuff;
+    `;
+
     return(
         <div css={keyStyle}>
-        <Carousel>
-            <Carousel.Item>
-                <img
+            <div css={css`background-image: url(${key1bg});
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;`}>
+
+        <Carousel
+        interval={null}
+        bsPrefix="carousel">
+            <Carousel.Item bsPrefix="carousel-item">
+                {/* <img
                 className="d-block w-100"
-                src="holder.js/800x400?text=First slide&bg=373940"
+                src={demographics0}
                 alt="First slide"
-                />
-                <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                /> */}
+                <div css={css`
+                height: 100%;
+                width: 100%;
+                background-color: ${themeColors.leaf};
+                color: ${themeColors.white};
+                padding: 19%;
+                `}>
+                    <h1>Regional Demographics and the Economy</h1>
+                    <p>Changes in our population will influence housing demand, tax revenue, and transportation needs. In this section we examine who might live in the region by 2050, what kinds of homes might they want, and what services we need to plan for. </p>
+                </div>
+                <Carousel.Caption bsPrefix="carousel-caption">
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="holder.js/800x400?text=Second slide&bg=282c34"
+                src={demographics0}
                 alt="Second slide"
                 />
-
                 <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="holder.js/800x400?text=Third slide&bg=20232a"
+                src={demographics1}
                 alt="Third slide"
                 />
-
                 <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={demographics2}
+                alt="Fourth slide"
+                />
+                <Carousel.Caption>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={demographics3}
+                alt="Fifth slide"
+                />
+                <Carousel.Caption>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={demographics4}
+                alt="Third slide"
+                />
+                <Carousel.Caption>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={demographics5}
+                alt="Third slide"
+                />
+                <Carousel.Caption>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={demographics6}
+                alt="Third slide"
+                />
+                <Carousel.Caption>
+                    <h3>Last Slide</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+        </div>
         </div>
     )
 }
