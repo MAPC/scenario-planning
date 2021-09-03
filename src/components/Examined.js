@@ -10,7 +10,10 @@ import triangleRight2 from "../assets/triangle-right2.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Key1 from "./Key1"
+import Key1 from "./Key1";
+import Key2 from "./Key2";
+import Key3 from "./Key3";
+import WithScrollbar from "./WithScrollbar";
 
 const Examined = () => {
     return (
@@ -20,6 +23,9 @@ const Examined = () => {
                     <h3>Four Key Uncertainties Examined</h3>
                 </div>
                 <Key1 />
+                {/* <Key2 deviceType={"mobile"} /> */}
+                <Key3 />
+                {/* <WithScrollbar /> */}
             </div>
         </div>
     )

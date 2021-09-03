@@ -10,6 +10,7 @@ const contentContainer = css`
     padding: 2vh 0;
     color: ${themeColors.white};
     background: ${themeColors.indigo};
+    position: relative;
 `;
 
 const contentPage = css`

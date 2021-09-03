@@ -22,12 +22,6 @@ import Carousel from "react-bootstrap/Carousel";
 
 const Key1 = () => {
 
-    const slide1 = css`
-        height: 100%;
-        width: 100%;
-        background-color: peachpuff;
-    `;
-
     return(
         <div css={keyStyle}>
             <div css={css`background-image: url(${key1bg});

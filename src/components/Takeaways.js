@@ -24,7 +24,7 @@ const Takeaways = () => {
                     <ul>
                         <Accordion flush bsPrefix="accordion">
                             <Accordion.Item eventKey="0" bsPrefix="accordion-item">
-                                <Accordion.Header bsPrefix="accordion-header">Increased equity among residents enables us to be a more resilient region</Accordion.Header>
+                                <Accordion.Header bsPrefix="accordion-header"><p>Increased equity among residents enables us to be a more resilient region</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -34,7 +34,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header>We need to find incentives beyond profit to get to our goals</Accordion.Header>
+                                <Accordion.Header><p>We need to find incentives beyond profit to get to our goals</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -44,7 +44,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header>We can’t think ‘in aggregate:’ Without centering vulnerable populations in policy conversations, future uncertainty can lead to further inequities</Accordion.Header>
+                                <Accordion.Header><p>We can’t think ‘in aggregate:’ Without centering vulnerable populations in policy conversations, future uncertainty can lead to further inequities</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -54,7 +54,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header>Flexibility is Key: We need fluidity in our systems and structures to respond to new challenges and opportunities</Accordion.Header>
+                                <Accordion.Header><p>Flexibility is Key: We need fluidity in our systems and structures to respond to new challenges and opportunities</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -64,7 +64,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="4">
-                                <Accordion.Header>Thinking proactively about systems and structures can help avoid needing to think reactively</Accordion.Header>
+                                <Accordion.Header><p>Thinking proactively about systems and structures can help avoid needing to think reactively</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -74,7 +74,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="5">
-                                <Accordion.Header>All policy decisions are inter-connected</Accordion.Header>
+                                <Accordion.Header><p>All policy decisions are inter-connected</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -84,7 +84,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="6">
-                                <Accordion.Header>We need to plan for what we do know: Everything hinges on climate change</Accordion.Header>
+                                <Accordion.Header><p>We need to plan for what we do know: Everything hinges on climate change</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -94,7 +94,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="7">
-                                <Accordion.Header>Policies disincentives and incentives should center equity. All policies should make our desired choice the path of least resistance</Accordion.Header>
+                                <Accordion.Header><p>Policies disincentives and incentives should center equity. All policies should make our desired choice the path of least resistance</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -104,7 +104,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="8">
-                                <Accordion.Header>Who is a government? We must change systems to better share decision making power</Accordion.Header>
+                                <Accordion.Header><p>Who is a government? We must change systems to better share decision making power</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>
@@ -114,7 +114,7 @@ const Takeaways = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="9">
-                                <Accordion.Header>Responding to future changes provides an opportunity to ‘rebalance prioritization’ and express our values</Accordion.Header>
+                                <Accordion.Header><p>Responding to future changes provides an opportunity to ‘rebalance prioritization’ and express our values</p></Accordion.Header>
                                 <Accordion.Body>
                                     <p>29 years ago our region looked completely different. In the early 1990s there was no massive internet infrastructure, cell phones were just starting to come into existence, and the City of Boston had a massive highway running down the middle of the city where the Greenway currently exists. It’s hard to know what 2050 may look like, but we do know one thing for sure. The future will be different than it is today.</p>                
                                     <p>One of the reasons planning for the next 29 years is so complicated is because the future is based on things both inside and outside of our control at the regional level. This plan is just part of our opportunity, and responsibility to our future selves and future residents of the region, to plan for that uncertainty.</p>

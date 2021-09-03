@@ -194,6 +194,7 @@ const sectionStyle1 = css`
 
     p {
       font-family: ${fonts.swiftNeueLtPro};
+      margin-right: 0;
     }
 
     .teal-text {
@@ -236,6 +237,10 @@ const sectionStyle1 = css`
       font-size: 16px;
       font-family: ${fonts.swiftNeueLtPro};
       color: ${themeColors.leaf};
+      p {
+        margin-bottom: 0;
+        margin-right: 3rem;
+      }
     }
 
   }
@@ -258,7 +263,7 @@ const liTitle = css`
 
 const sectionStyle2 = css`
   width: 100vw;
-  height: 100vh;
+  height: auto;
   // margin: 10rem 14rem;
   padding: 0;
   position: relative;
@@ -281,6 +286,7 @@ const sectionStyle2 = css`
 const keyStyle = css`
   height: 100vh;
   width: 100%;
+  display: flex;
 
   .carousel {
     width: 100%;

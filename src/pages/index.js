@@ -26,8 +26,8 @@ const IndexPage = () => {
       <About />
       <Takeaways />
       <Examined />
-      <Slides />
-      <Goals />
+      {/* <Slides /> */}
+      {/* <Goals /> */}
       <Banner />
       {/* <Main /> */}
       <FooterComponent />
