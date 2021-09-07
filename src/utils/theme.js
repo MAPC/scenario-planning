@@ -230,6 +230,10 @@ const sectionStyle1 = css`
       // transition: all 0.2s ease-in-out;
     }
 
+    .accordion-button:not(.collapsed):after {
+      transform: rotate(90deg);
+    }
+
     .accordion-button:focus {
       box-shadow: none;
     }
