@@ -16,7 +16,8 @@ const themeColors = {
   white: '#FFFFFF',
   black: '#000000',
   leaf: '#03332D',
-  fontGray: '#545454'
+  fontGray: '#545454',
+  orange: '#F3781F'
 };
 
 const headerStyle = css`

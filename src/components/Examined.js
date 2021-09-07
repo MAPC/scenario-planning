@@ -22,7 +22,7 @@ const Examined = () => {
                 <div className="section-content-2">
                     <h3>Four Key Uncertainties Examined</h3>
                 </div>
-                <Key1 />
+                {/* <Key1 /> */}
                 {/* <Key2 deviceType={"mobile"} /> */}
                 <Key3 />
                 {/* <WithScrollbar /> */}

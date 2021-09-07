@@ -14,6 +14,8 @@ import travel7 from "../assets/key3/travel7.png";
 import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";
+import key3Data from "../utils/key3Data";
+import { elementType } from "prop-types";
 
 const responsive = {
   desktop: {
@@ -94,6 +96,7 @@ class Key3 extends React.Component {
             <div css={css`
                 height: 100%;
                 width: 140%;
+                // padding-left: 6rem;
                 display: flex;
                 align-items: center;`}>
                 <Carousel
@@ -106,97 +109,32 @@ class Key3 extends React.Component {
                     containerClass="carousel-container-with-scrollbar"
                     additionalTransfrom={-this.state.additionalTransfrom}
                     beforeChange={nextSlide => {
-                    if (nextSlide !== 0 && this.state.additionalTransfrom !== 150) {
-                        this.setState({ additionalTransfrom: 150 });
+                    if (nextSlide !== 0 && this.state.additionalTransfrom !== 0) {
+                        this.setState({ additionalTransfrom: 0 });
                     }
-                    if (nextSlide === 0 && this.state.additionalTransfrom === 150) {
+                    if (nextSlide === 0 && this.state.additionalTransfrom === 0) {
                         this.setState({ additionalTransfrom: 0 });
                     }
                     }}
                 >
+                    {key3Data.map(elem => {
+                        return (
+                            <div class="image-container increase-size" 
+                                style={{border: "5px solid", borderColor: themeColors.orange}}
+                            >
+                                {/* <div class="image-container-text">
+                                    <h3>{elem.h3}</h3>
+                                </div> */}
+                                <img
+                                    draggable={false}
+                                    style={{ width: "100%", cursor: "pointer" }}
+                                    src={elem.imgSrc}
+                                />
+                            </div>
+                        );
+                    })}
+                    {/* blank final slide */}
                     <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel0}
-                    />
-                    </div>
-                    <div class="increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel1}
-                    />
-                    </div>
-
-                    <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel2}
-                    />
-                    </div>
-
-                    <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel3}
-                    />
-                    </div>
-
-                    <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel4}
-                    />
-                    </div>
-                    <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel5}
-                    />
-                    </div>
-                    <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel6}
-                    />
-                    </div>
-                    <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel7}
-                    />
-                    </div>
-                    <div class="image-container increase-size">
-                    <div class="image-container-text">
-                    </div>
-                    {/* <img
-                        draggable={false}
-                        style={{ width: "100%", cursor: "pointer" }}
-                        src={travel7}
-                    /> */}
                     </div>
                 </Carousel>
             </div>
