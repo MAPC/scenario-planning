@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { css, jsx } from '@emotion/react';
-import samplePDF from "../utils/sample.pdf";
-import { Document, Page } from 'react-pdf';
 
 
 const Key4 = () => {
@@ -15,13 +13,6 @@ const Key4 = () => {
     }
     return (
         <div>
-            <Document
-                file={samplePDF}
-                onLoadSuccess={onDocumentLoadSuccess}
-            >
-                <Page pageNumber={pageNumber}></Page>
-            </Document>
-            <p>Page {pageNumber} of {numPages}</p>
         </div>
     );
 }

@@ -118,14 +118,6 @@ class Key3 extends React.Component {
                     }
                     }}
                 >
-                    {/* <div class="image-container increase-size" 
-                                style={{border: "5px solid", borderColor: themeColors.orange}}
-                    >
-                        <div dangerouslySetInnerHTML={{__html: travelHTML}} ></div>
-                        <img src={samplePDF} />
-                        <iframe src="https://slides.com/mapc/test-slide/embed?style=hidden&byline=hidden&share=hidden" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div> */}
-
                     {key3Data.map(elem => {
                         return (
                             <div class="image-container increase-size" 
