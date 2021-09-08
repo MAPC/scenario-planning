@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import * as React from "react";
+import React, { useState } from "react";
 import { css, jsx } from '@emotion/react';
 import { sectionStyle1, keyStyle, themeColors } from "../utils/theme";
 import travel0 from "../assets/key3/travel0.jpg";
@@ -15,7 +15,6 @@ import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";
 import key3Data from "../utils/key3Data";
-import { elementType } from "prop-types";
 
 const responsive = {
   desktop: {
@@ -31,6 +30,7 @@ const responsive = {
     items: 1
   }
 };
+
 
 class Key3 extends React.Component {
   state = { additionalTransfrom: 0 };
@@ -50,6 +50,7 @@ class Key3 extends React.Component {
         value = maxTranslateX / 100; // calculate the unit of transform for the slider
       }
       const { transform } = carouselState;
+      
       return (
         <div className="custom-slider">
           <input
@@ -117,6 +118,14 @@ class Key3 extends React.Component {
                     }
                     }}
                 >
+                    {/* <div class="image-container increase-size" 
+                                style={{border: "5px solid", borderColor: themeColors.orange}}
+                    >
+                        <div dangerouslySetInnerHTML={{__html: travelHTML}} ></div>
+                        <img src={samplePDF} />
+                        <iframe src="https://slides.com/mapc/test-slide/embed?style=hidden&byline=hidden&share=hidden" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div> */}
+
                     {key3Data.map(elem => {
                         return (
                             <div class="image-container increase-size" 
@@ -133,6 +142,7 @@ class Key3 extends React.Component {
                             </div>
                         );
                     })}
+
                     {/* blank final slide */}
                     <div class="image-container increase-size">
                     </div>

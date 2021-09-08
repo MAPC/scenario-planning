@@ -13,6 +13,7 @@ import Col from "react-bootstrap/Col";
 import Key1 from "./Key1";
 import Key2 from "./Key2";
 import Key3 from "./Key3";
+import Key4 from "./Key4";
 import WithScrollbar from "./WithScrollbar";
 
 const Examined = () => {
@@ -26,6 +27,7 @@ const Examined = () => {
                 {/* <Key2 deviceType={"mobile"} /> */}
                 <Key3 />
                 {/* <WithScrollbar /> */}
+                {/* <Key4 /> */}
             </div>
         </div>
     )

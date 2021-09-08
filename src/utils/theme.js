@@ -160,7 +160,7 @@ const aboutStyle = css`
   }
 
   .about-content {
-    padding: 0 22rem 10rem;
+    padding: 0 22rem 4rem;
     h3 {
       font-size: 24px;
       font-family: ${fonts.calibre};
@@ -184,7 +184,7 @@ const sectionStyle1 = css`
   
   .section-content {
     width: 80%;
-    padding: 10rem 4rem 10rem 14rem;
+    padding: 10rem 4rem 0 14rem;
     
     h3 {
       font-size: 44px;
@@ -254,7 +254,8 @@ const sectionStyle1 = css`
     padding: 10rem 0;
 
     .triangle-large {
-      width: 30rem;
+      // width: 30rem;
+      width: 100%;
     }
 
   }

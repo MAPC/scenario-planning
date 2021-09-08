@@ -28,7 +28,7 @@ const IndexPage = () => {
       <Examined />
       {/* <Slides /> */}
       {/* <Goals /> */}
-      <Banner />
+      {/* <Banner /> */}
       {/* <Main /> */}
       <FooterComponent />
     </main>
