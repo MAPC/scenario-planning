@@ -27,7 +27,7 @@ const Examined = () => {
                 {/* <Key2 deviceType={"mobile"} /> */}
                 <Key3 />
                 {/* <WithScrollbar /> */}
-                {/* <Key4 /> */}
+                <Key4 />
             </div>
         </div>
     )
