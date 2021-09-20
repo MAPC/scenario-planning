@@ -2,11 +2,14 @@
 
 import React, { useState } from "react";
 import { css, jsx } from '@emotion/react';
-import { sectionStyle1, keyStyle, themeColors } from "../utils/theme";
+import { sectionStyle1, keyStyle, themeColors, fonts } from "../utils/theme";
 import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";
 import key3Data from "../utils/key3Data";
+// import { ReactComponent as triangleRight } from "../assets/triangle-right.svg";
+import triangleRight from "../assets/triangle-right.svg";
+import triangleRightOrange from "../assets/triangle-right-orange@2x.png";
 
 const responsive = {
   desktop: {
@@ -108,29 +111,214 @@ class Key4 extends React.Component {
                         }
                         }}
                     >
-                        <div 
-                            style={{border: "5px solid", borderColor: themeColors.orange, minHeight: "40vw", background: themeColors.orange}}
-                        >
-                            <div
-                                style={{}}
-                            >
-                                <h3>test1</h3>
-                            </div>
+                      {/* Slide 1 */}
+                      <div 
+                        css={css`
+                          border: 5px solid ${themeColors.orange};
+                          min-height: 40vw;
+                          padding: 4rem 6rem;
+                          background: ${themeColors.orange};
+                          color: white;
+                          font-family: ${fonts.calibre};
+                          font-weight: 200;
+                          font-size: 16px;
+                          line-height: 18px;
+                          h1 { 
+                            font-size: 44px; 
+                            line-height: 6rem;
+                          }
+                          .triangle-right {
+                            padding: 1%;
+                          }
+                        `}
+                      >
+                        <div>
+                          <h1>The Future of Travel</h1>
+                          <p>Technology and new forms of mobility will affect travel demand, traffic congestion, transit revenue, and environmental impacts. In this section, we examine how autonomous vehicles and emerging transportation services might - or might not - radically change the experience of moving around the region; and we explore how the explosion of remote work, virtual communication, and delivery services could reduce the need for travel entirely.</p>
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
                         </div>
+                      </div>
+                      {/* Slide 2 */}
+                      <div
+                        css={css`
+                        border: 5px solid ${themeColors.orange};
+                        min-height: 40vw;
+                        padding: 4rem 6rem;
+                        color: black;
+                        font-family: ${fonts.calibre};
+                        font-weight: 200;
+                        font-size: 16px;
+                        line-height: 18px;
+                        h1 { 
+                          font-size: 36px; 
+                          line-height: 4rem;
+                          color: ${themeColors.orange};
+                        }
+                        h2 {
+                          font-size: 24px;
+                          line-height: 28px;
 
-                        <div 
-                            style={{border: "5px solid", borderColor: themeColors.orange, minHeight: "70vh"}}
-                        >
-                            <div
-                                style={{background: themeColors.orange}}
-                            >
-                                <h3>test2</h3>
-                            </div>
+                        }
+                        h3 {
+                          font-size: 20px;
+                          position: absolute;
+                          right: 0;
+                          top: 0;
+                          padding-right: 6rem;
+                          padding-top: 4rem; 
+                          color: ${themeColors.orange};
+                        }
+                        li {
+                          list-style-image: url(${triangleRightOrange});
+                          padding: 8px;
+                          margin-left: 20px;
+                        }
+                      `}
+                      >
+                        <div>
+                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h1>What We Know:</h1>
+                          <h2>How We Move</h2>
+                          <h2>How Often We Move</h2>
+                          <ul>
+                            <li>The maintenance backlog, structural deficit, and contractual constraints at the MBTA make it difficult and time-consuming to invest in system expansions, increased service frequency, and innovative service delivery.​</li>
+                            <li>Auto-oriented development and abundant low-cost parking contributes to auto ownership and lower usage of transit and other modes, even when they are available and convenient.</li>
+                            <li>Rapid growth of TNCs, an explosion of micromobility diversity, advances in autonomous vehicles, and the growth of e-commerce demonstrate the rapidity with which the transportation landscape might change in coming decades.</li>
+                            <li>Imperatives to create a climate resilient and low-emission transportation system will spur investment into new technologies and infrastructure, as well as dramatic changes in the types of vehicles available to consumers and travelers.</li>
+                            <li>The COVID-19 pandemic has demonstrated the viability and limitations of remote options for some kinds of work, schooling, events, and communications. The disparity in the racial makeup of workers in occupations with high and low potential for remote work can exacerbate inequities in time spent commuting.​</li>
+                          </ul>
                         </div>
+                      </div>
+                      {/* Slide 3 */}
+                      <div 
+                        css={css`
+                        border: 5px solid ${themeColors.orange};
+                        min-height: 40vw;
+                        padding: 4rem 6rem;
+                        color: black;
+                        font-family: ${fonts.calibre};
+                        font-weight: 200;
+                        font-size: 16px;
+                        line-height: 18px;
+                        h1 { 
+                          font-size: 36px; 
+                          line-height: 4rem;
+                          color: ${themeColors.orange};
+                        }
+                        h2 {
+                          font-size: 24px;
+                          line-height: 28px;
 
-                        {/* blank final slide */}
-                        <div class="image-container increase-size">
+                        }
+                        h3 {
+                          font-size: 20px;
+                          position: absolute;
+                          right: 0;
+                          top: 0;
+                          padding-right: 6rem;
+                          padding-top: 4rem; 
+                          color: ${themeColors.orange};
+                        }
+                        li {
+                          list-style-image: url(${triangleRightOrange});
+                          padding: 8px;
+                          margin-left: 20px;
+                        }
+                        `}
+                      >
+                        <div>
+                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h1>What We Don't Know:</h1>
+                          <h2>Unknowns</h2>
+                          <ul>
+                            <li>Transportation network companies operate on an unsustainable business model, losing billions of dollars each year. Their survival depends heavily on a steady stream of capital from investors, and from a driver/employee classification that keep costs low by limiting companies’ obligations to provide benefits. Changes in investor preferences or labor rules could upend this business model and result in substantial contraction of service or higher prices. Will this happen and dampen ridership and transportation system impacts?</li>
+                            <li>The prospect of fully autonomous vehicles running in general traffic in the next decade remains highly speculative. Will the many technological, ethical, and economic barriers challenges be met, and result in the widespread adoption of autonomous vehicles?​</li>
+                            <li>The pandemic is likely to result in a long-term increase in time spent working remotely. How many jobs will become fully remote, and how will changes will affect location choice decisions for workers and firms?</li>
+                            <li>Will remote work, e-commerce, and virtual communications reduce the overall need for travel, or enable/prompt more discretionary trips that mitigate any reduction in total trips?</li>
+                          </ul>
                         </div>
+                      </div>
+                      {/* Slide 4 */}
+                      <div 
+                        css={css`
+                        border: 5px solid ${themeColors.orange};
+                        min-height: 40vw;
+                        padding: 4rem 6rem;
+                        color: black;
+                        font-family: ${fonts.calibre};
+                        font-weight: 200;
+                        font-size: 16px;
+                        line-height: 18px;
+                        h1 { 
+                          font-size: 36px; 
+                          line-height: 4rem;
+                          color: ${themeColors.orange};
+                        }
+                        h2 {
+                          font-size: 24px;
+                          line-height: 28px;
+
+                        }
+                        h3 {
+                          font-size: 20px;
+                          position: absolute;
+                          right: 0;
+                          top: 0;
+                          padding-right: 6rem;
+                          padding-top: 4rem; 
+                          color: ${themeColors.orange};
+                        }
+                        li {
+                          list-style-image: url(${triangleRightOrange});
+                          padding: 8px;
+                          margin-left: 20px;
+                        }
+                        `}
+                      >
+                        <div>
+                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h1>Takeaways:</h1>
+                          <h2>Possible Solutions</h2>
+                          <ul>
+                            <li>Transportation network companies operate on an unsustainable business model, losing billions of dollars each year. Their survival depends heavily on a steady stream of capital from investors, and from a driver/employee classification that keep costs low by limiting companies’ obligations to provide benefits. Changes in investor preferences or labor rules could upend this business model and result in substantial contraction of service or higher prices. Will this happen and dampen ridership and transportation system impacts?</li>
+                            <li>The prospect of fully autonomous vehicles running in general traffic in the next decade remains highly speculative. Will the many technological, ethical, and economic barriers challenges be met, and result in the widespread adoption of autonomous vehicles?​</li>
+                            <li>The pandemic is likely to result in a long-term increase in time spent working remotely. How many jobs will become fully remote, and how will changes will affect location choice decisions for workers and firms?</li>
+                            <li>Will remote work, e-commerce, and virtual communications reduce the overall need for travel, or enable/prompt more discretionary trips that mitigate any reduction in total trips?</li>
+                          </ul>
+                        </div>
+                      </div>
+                      {/* Slide 5 */}
+                      <div 
+                        style={{border: "5px solid", borderColor: themeColors.orange, minHeight: "40vw", background: "white"}}
+                      >
+                        <div
+                          css={css`
+                          border: 5px solid ${themeColors.orange};
+                          min-height: 40vw;
+                          padding: 4rem 6rem;
+                          background: ${themeColors.orange};
+                          color: white;
+                          font-family: ${fonts.calibre};
+                          font-weight: 200;
+                          font-size: 16px;
+                          line-height: 18px;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          `}
+                        >
+                          <h2>Learn more through MAPC's research on the <a href="https://www.mapc.org/wp-content/uploads/2021/02/Feb2021-Ecommerce-Report.pdf">impact of ecommerce</a>, <a href="https://www.mapc.org/resource-library/the-growing-carbon-footprint-of-ride-hailing-in-massachusetts/">TNCs</a>, and <a href="https://www.mapc.org/resource-library/autonomous-vehicles/">automated vehicle technology.</a></h2>
+                        </div>
+                      </div> 
+
+
+
+                      {/* blank final slide */}
+                      <div class="image-container increase-size">
+                      </div>
                     </Carousel>
                 </div>
             </div>

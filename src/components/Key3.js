@@ -123,9 +123,6 @@ class Key3 extends React.Component {
                             <div class="image-container increase-size" 
                                 style={{border: "5px solid", borderColor: themeColors.orange}}
                             >
-                                {/* <div class="image-container-text">
-                                    <h3>{elem.h3}</h3>
-                                </div> */}
                                 <img
                                     draggable={false}
                                     style={{ width: "100%", cursor: "pointer" }}
