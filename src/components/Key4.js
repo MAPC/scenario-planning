@@ -118,7 +118,7 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                           border: 5px solid ${themeColors.orange};
-                          height: 55vw;
+                          height: 90vh;
                           padding: 4rem 6rem;
                           background: ${themeColors.orange};
                           color: white;
@@ -148,7 +148,7 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                           border: 5px solid ${themeColors.orange};
-                          height: 55vw;
+                          height: 90vh;
                           padding: 4rem 6rem;
                           background: ${themeColors.orange};
                           color: white;
@@ -177,7 +177,7 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        height: 55vw;
+                        height: 90vh;
                         padding: 4rem 6rem;
                         background: white;
                         color: black;
@@ -234,7 +234,7 @@ class Key4 extends React.Component {
                       <div
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        height: 55vw;
+                        height: 90vh;
                         padding: 4rem 6rem;
                         background: white;
                         color: black;
@@ -283,7 +283,7 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        height: 55vw;
+                        height: 90vh;
                         padding: 4rem 6rem;
                         background: white;
                         color: black;
@@ -333,7 +333,7 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        height: 55vw;
+                        height: 90vh;
                         padding: 4rem 6rem;
                         background: white;
                         color: black;
@@ -390,7 +390,7 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        height: 55vw;
+                        height: 90vh;
                         padding: 4rem 6rem;
                         background: white;
                         color: black;
@@ -442,7 +442,7 @@ class Key4 extends React.Component {
                         <div
                           css={css`
                           border: 5px solid ${themeColors.orange};
-                          height: 55vw;
+                          height: 90vh;
                           padding: 4rem 6rem;
                           background: ${themeColors.orange};
                           color: white;
