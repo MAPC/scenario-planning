@@ -10,6 +10,9 @@ import key3Data from "../utils/key3Data";
 // import { ReactComponent as triangleRight } from "../assets/triangle-right.svg";
 import triangleRight from "../assets/triangle-right.svg";
 import triangleRightOrange from "../assets/triangle-right-orange@2x.png";
+import travelDeckBg from "../assets/deck-backgrounds/mapc-skyline.jpeg";
+import triangleQuad from "../assets/Group-117@2x.png";
+import trafficGraphic from "../assets/Group-102@2x.png";
 
 const responsive = {
   desktop: {
@@ -83,7 +86,7 @@ class Key4 extends React.Component {
     return (
         <div css={keyStyle}>
             <div css={css`
-                background: white;
+                background-image: url(${travelDeckBg});
                 height: 100vh;
                 width: 100vw;
                 overflow: hidden;
@@ -115,7 +118,7 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                           border: 5px solid ${themeColors.orange};
-                          min-height: 40vw;
+                          height: 55vw;
                           padding: 4rem 6rem;
                           background: ${themeColors.orange};
                           color: white;
@@ -125,7 +128,7 @@ class Key4 extends React.Component {
                           line-height: 18px;
                           h1 { 
                             font-size: 44px; 
-                            line-height: 6rem;
+                            padding-bottom: 20px;
                           }
                           .triangle-right {
                             padding: 1%;
@@ -141,12 +144,42 @@ class Key4 extends React.Component {
                           <img src={triangleRight} className="triangle-right" alt="Triangle" />
                         </div>
                       </div>
-                      {/* Slide 2 */}
-                      <div
+                      {/* Slide */}
+                      <div 
+                        css={css`
+                          border: 5px solid ${themeColors.orange};
+                          height: 55vw;
+                          padding: 4rem 6rem;
+                          background: ${themeColors.orange};
+                          color: white;
+                          font-family: ${fonts.calibre};
+                          font-weight: 200;
+                          font-size: 16px;
+                          line-height: 18px;
+                          h1 { 
+                            font-size: 44px; 
+                            padding-bottom: 20px;
+                          }
+                          .triangle-right {
+                            padding: 1%;
+                          }
+                        `}
+                      >
+                        <div>
+                          <h1>
+                            How We Move.
+                            <br/>
+                            How Often We Move.
+                          </h1>
+                        </div>
+                      </div>
+                      {/* Slide 4 */}
+                      <div 
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        min-height: 40vw;
+                        height: 55vw;
                         padding: 4rem 6rem;
+                        background: white;
                         color: black;
                         font-family: ${fonts.calibre};
                         font-weight: 200;
@@ -168,7 +201,63 @@ class Key4 extends React.Component {
                           right: 0;
                           top: 0;
                           padding-right: 6rem;
-                          padding-top: 4rem; 
+                          padding-top: 3rem; 
+                          color: ${themeColors.orange};
+                        }
+                        ul {
+                          width: 50%;
+                        }
+                        li {
+                          list-style-image: url(${triangleRightOrange});
+                          padding: 8px;
+                          margin-left: 20px;
+                        }
+                        img {
+                          position: absolute;
+                          right: 1rem;
+                          top: 0;
+                          margin-top: 10rem;
+                        }
+                        `}
+                      >
+                        <div>
+                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h1>What We Know:</h1>
+                          <h2>Travel’s Impact on the Region</h2>
+                          <ul>
+                            <li>The maintenance backlog, structural deficit, and contractual constraints at the MBTA make it difficult and time-consuming to invest in system expansions, increased service frequency, and innovative service delivery.</li>
+                          </ul>
+                          <img src={trafficGraphic} alt="Car and Street" />
+                        </div>
+                      </div>
+                      {/* Slide 2 */}
+                      <div
+                        css={css`
+                        border: 5px solid ${themeColors.orange};
+                        height: 55vw;
+                        padding: 4rem 6rem;
+                        background: white;
+                        color: black;
+                        font-family: ${fonts.calibre};
+                        font-weight: 200;
+                        font-size: 16px;
+                        line-height: 18px;
+                        h1 { 
+                          font-size: 36px; 
+                          line-height: 4rem;
+                          color: ${themeColors.orange};
+                        }
+                        h2 {
+                          font-size: 24px;
+                          line-height: 28px;
+                        }
+                        h3 {
+                          font-size: 20px;
+                          position: absolute;
+                          right: 0;
+                          top: 0;
+                          padding-right: 6rem;
+                          padding-top: 3rem; 
                           color: ${themeColors.orange};
                         }
                         li {
@@ -181,10 +270,8 @@ class Key4 extends React.Component {
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
                           <h1>What We Know:</h1>
-                          <h2>How We Move</h2>
-                          <h2>How Often We Move</h2>
+                          <h2>Travel’s Impact on the Region</h2>
                           <ul>
-                            <li>The maintenance backlog, structural deficit, and contractual constraints at the MBTA make it difficult and time-consuming to invest in system expansions, increased service frequency, and innovative service delivery.​</li>
                             <li>Auto-oriented development and abundant low-cost parking contributes to auto ownership and lower usage of transit and other modes, even when they are available and convenient.</li>
                             <li>Rapid growth of TNCs, an explosion of micromobility diversity, advances in autonomous vehicles, and the growth of e-commerce demonstrate the rapidity with which the transportation landscape might change in coming decades.</li>
                             <li>Imperatives to create a climate resilient and low-emission transportation system will spur investment into new technologies and infrastructure, as well as dramatic changes in the types of vehicles available to consumers and travelers.</li>
@@ -196,8 +283,9 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        min-height: 40vw;
+                        height: 55vw;
                         padding: 4rem 6rem;
+                        background: white;
                         color: black;
                         font-family: ${fonts.calibre};
                         font-weight: 200;
@@ -219,7 +307,7 @@ class Key4 extends React.Component {
                           right: 0;
                           top: 0;
                           padding-right: 6rem;
-                          padding-top: 4rem; 
+                          padding-top: 3rem; 
                           color: ${themeColors.orange};
                         }
                         li {
@@ -245,8 +333,9 @@ class Key4 extends React.Component {
                       <div 
                         css={css`
                         border: 5px solid ${themeColors.orange};
-                        min-height: 40vw;
+                        height: 55vw;
                         padding: 4rem 6rem;
+                        background: white;
                         color: black;
                         font-family: ${fonts.calibre};
                         font-weight: 200;
@@ -268,7 +357,64 @@ class Key4 extends React.Component {
                           right: 0;
                           top: 0;
                           padding-right: 6rem;
-                          padding-top: 4rem; 
+                          padding-top: 3rem; 
+                          color: ${themeColors.orange};
+                        }
+                        ul {
+                          width: 50%;
+                        }
+                        li {
+                          list-style-image: url(${triangleRightOrange});
+                          padding: 8px;
+                          margin-left: 20px;
+                        }
+                        img#triangle-quad {
+                          position: absolute;
+                          right: -6rem;
+                          top: 0;
+                          margin-top: 10rem;
+                        }
+                        `}
+                      >
+                        <div>
+                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h1>Takeaways:</h1>
+                          <h2>Possible Solutions</h2>
+                          <ul>
+                            <li>Transportation network companies operate on an unsustainable business model, losing billions of dollars each year. Their survival depends heavily on a steady stream of capital from investors, and from a driver/employee classification that keep costs low by limiting companies’ obligations to provide benefits. Changes in investor preferences or labor rules could upend this business model and result in substantial contraction of service or higher prices. Will this happen and dampen ridership and transportation system impacts?</li>
+                          </ul>
+                          <img src={triangleQuad} id="triangle-quad" alt="Car and Street" />
+                        </div>
+                      </div>
+                      {/* Slide 4 */}
+                      <div 
+                        css={css`
+                        border: 5px solid ${themeColors.orange};
+                        height: 55vw;
+                        padding: 4rem 6rem;
+                        background: white;
+                        color: black;
+                        font-family: ${fonts.calibre};
+                        font-weight: 200;
+                        font-size: 16px;
+                        line-height: 18px;
+                        h1 { 
+                          font-size: 36px; 
+                          line-height: 4rem;
+                          color: ${themeColors.orange};
+                        }
+                        h2 {
+                          font-size: 24px;
+                          line-height: 28px;
+
+                        }
+                        h3 {
+                          font-size: 20px;
+                          position: absolute;
+                          right: 0;
+                          top: 0;
+                          padding-right: 6rem;
+                          padding-top: 3rem; 
                           color: ${themeColors.orange};
                         }
                         li {
@@ -283,21 +429,20 @@ class Key4 extends React.Component {
                           <h1>Takeaways:</h1>
                           <h2>Possible Solutions</h2>
                           <ul>
-                            <li>Transportation network companies operate on an unsustainable business model, losing billions of dollars each year. Their survival depends heavily on a steady stream of capital from investors, and from a driver/employee classification that keep costs low by limiting companies’ obligations to provide benefits. Changes in investor preferences or labor rules could upend this business model and result in substantial contraction of service or higher prices. Will this happen and dampen ridership and transportation system impacts?</li>
                             <li>The prospect of fully autonomous vehicles running in general traffic in the next decade remains highly speculative. Will the many technological, ethical, and economic barriers challenges be met, and result in the widespread adoption of autonomous vehicles?​</li>
                             <li>The pandemic is likely to result in a long-term increase in time spent working remotely. How many jobs will become fully remote, and how will changes will affect location choice decisions for workers and firms?</li>
                             <li>Will remote work, e-commerce, and virtual communications reduce the overall need for travel, or enable/prompt more discretionary trips that mitigate any reduction in total trips?</li>
                           </ul>
                         </div>
                       </div>
-                      {/* Slide 5 */}
+                      {/* Slide */}
                       <div 
                         style={{border: "5px solid", borderColor: themeColors.orange, minHeight: "40vw", background: "white"}}
                       >
                         <div
                           css={css`
                           border: 5px solid ${themeColors.orange};
-                          min-height: 40vw;
+                          height: 55vw;
                           padding: 4rem 6rem;
                           background: ${themeColors.orange};
                           color: white;
