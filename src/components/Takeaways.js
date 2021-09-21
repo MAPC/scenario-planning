@@ -10,8 +10,8 @@ import triangleRight2 from "../assets/triangle-right2.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import { Accordion } from "mapc-design-system";
-import Accordion from "react-bootstrap/Accordion"
+import Accordion from "react-bootstrap/Accordion";
+import triangleQuadrant from "../assets/Group-118@2x.png";
 
 const Takeaways = () => {
     return (
@@ -53,14 +53,15 @@ const Takeaways = () => {
                     </ul>
                 </Col>
                 <Col className="section-images">
-                    <Row>
+                    <img src={triangleQuadrant} alt="Notecards, gathering of people, light teal triangle, dark teal triangle" />
+                    {/* <Row>
                         <img className="triangle-large" src={topImage} alt="Notecards" />
                         <img className="triangle-large" src={bottomImage} alt="Gathering of People" />
                     </Row>
                     <Row>
                         <img className="triangle-large" src={triangleRight1} alt="Light Teal Triangle"/>
                         <img className="triangle-large" src={triangleRight2} alt="Dark Teal Triangle"/>
-                    </Row>
+                    </Row> */}
                 </Col>
                 </Row>
             </Container>

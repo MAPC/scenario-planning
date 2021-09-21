@@ -280,7 +280,7 @@ const sectionStyle2 = css`
       font-size: 44px;
       font-weight: 300;
       letter-spacing: 1.5px;
-      margin: 10rem 0 6rem 14rem;
+      margin: 10rem 0 2rem 14rem;
     }
 
     p {

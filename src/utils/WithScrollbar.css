@@ -36,7 +36,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 .custom-slider {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   width: 51%;
   padding: 0 20px;
 }

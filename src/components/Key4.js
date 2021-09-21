@@ -84,9 +84,27 @@ class Key4 extends React.Component {
       );
     };
     return (
-        <div css={keyStyle}>
+        <div css={css`background-image: url(${travelDeckBg}); background-position: center; background-size: cover;`}>
             <div css={css`
-                background-image: url(${travelDeckBg});
+                height: auto;
+                width: auto;
+                margin: 0 14rem 6rem;
+                h3 {
+                  font-weight: 300;
+                  margin: 0 0 24px;
+                }
+                p {
+                  font-family: ${fonts.swiftNeueLtPro};
+                  font-size: 16px;
+                }
+            `}>
+                <h3>The Future of Travel</h3>
+                <p>Transportation is a fundamentally regional issue – people travel all throughout Metro Boston, and we all share a network of roadways, transit systems, bike routes, and other infrastructure. It is already clear that the transportation system of today is incapable of meeting the needs of tomorrow. Congestion is among the worst in the nation; commuters of color experience disproportionately long commutes when compared to White commuters; transportation produces a third of our GHG emissions; deferred maintenance undermines safety and reliability; and subways and roadways are already disrupted during major storms.</p>
+                <p>Meeting the transportation challenges of the future will require both regional coordination and local action. It will also require a sense of how the region’s travel needs, vehicles, and transportation services may change over the coming decades.  As with other uncertainties, some aspects of future travel are relatively certain: most trips will start and end in places that are already built up; most travelers will value speed and convenience over other considerations; and highway expansion just induces more demand and congestion.</p>
+                <p>Yet many other aspects of travel were highly uncertain before the COVID-19 pandemic and are even more so today. Transportation technologies and services have evolved rapidly and will continue to do so over the next three decades. The proliferation of ride-hailing, delivery services, e-commerce, e-bikes, and micromobility demonstrate how quickly new modes and services can be adopted, and how disruptive they may be to existing transport services, roadways, and communities. Just as the impact of new technologies and services would have been hard to predict in 1990, the upcoming impact of autonomous vehicles, mobility as a service, and delivery services are hard to foresee.</p>
+                <p>Similarly, the COVID 19 pandemic has demonstrated that disruptions can also drastically reduce the need for travel. Remote work, remote school, telemedicine, and virtual parties have all allowed people to do many things without leaving their home. Certainly some—though not all—of these trends will continue after the pandemic, especially as communication technology improves and virtual reality closes the gap between virtual and in-person interaction.</p>
+            </div>
+            <div css={css`
                 height: 100vh;
                 width: 100vw;
                 overflow: hidden;
@@ -130,34 +148,9 @@ class Key4 extends React.Component {
                             font-size: 44px; 
                             padding-bottom: 20px;
                           }
-                          .triangle-right {
-                            padding: 1%;
-                          }
-                        `}
-                      >
-                        <div>
-                          <h1>The Future of Travel</h1>
-                          <p>Technology and new forms of mobility will affect travel demand, traffic congestion, transit revenue, and environmental impacts. In this section, we examine how autonomous vehicles and emerging transportation services might - or might not - radically change the experience of moving around the region; and we explore how the explosion of remote work, virtual communication, and delivery services could reduce the need for travel entirely.</p>
-                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
-                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
-                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
-                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
-                        </div>
-                      </div>
-                      {/* Slide */}
-                      <div 
-                        css={css`
-                          border: 5px solid ${themeColors.orange};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.orange};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          h1 { 
-                            font-size: 44px; 
+                          h2 {
+                            font-size: 24px;
+                            line-height: 28px;
                             padding-bottom: 20px;
                           }
                           .triangle-right {
@@ -166,11 +159,12 @@ class Key4 extends React.Component {
                         `}
                       >
                         <div>
-                          <h1>
-                            How We Move.
-                            <br/>
-                            How Often We Move.
-                          </h1>
+                          <h1>The Future of Travel</h1>
+                          <h2>How We Move.<br/>How Often We Move.</h2>
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
+                          <img src={triangleRight} className="triangle-right" alt="Triangle" />
                         </div>
                       </div>
                       {/* Slide 4 */}
@@ -193,7 +187,7 @@ class Key4 extends React.Component {
                         h2 {
                           font-size: 24px;
                           line-height: 28px;
-
+                          padding-bottom: 20px;
                         }
                         h3 {
                           font-size: 20px;
@@ -250,6 +244,7 @@ class Key4 extends React.Component {
                         h2 {
                           font-size: 24px;
                           line-height: 28px;
+                          padding-bottom: 20px;
                         }
                         h3 {
                           font-size: 20px;
@@ -299,7 +294,7 @@ class Key4 extends React.Component {
                         h2 {
                           font-size: 24px;
                           line-height: 28px;
-
+                          padding-bottom: 20px;
                         }
                         h3 {
                           font-size: 20px;
@@ -349,7 +344,7 @@ class Key4 extends React.Component {
                         h2 {
                           font-size: 24px;
                           line-height: 28px;
-
+                          padding-bottom: 20px;
                         }
                         h3 {
                           font-size: 20px;
@@ -406,7 +401,7 @@ class Key4 extends React.Component {
                         h2 {
                           font-size: 24px;
                           line-height: 28px;
-
+                          padding-bottom: 20px;
                         }
                         h3 {
                           font-size: 20px;
