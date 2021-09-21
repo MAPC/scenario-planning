@@ -12,13 +12,15 @@ const themeColors = {
   indigo: '#101436',
   teal: '#4CC1B9',
   lightTeal: '#ebf6f7',
+  turquoise: '#67CBE4',
   lightGray: '#D8D8D8',
   white: '#FFFFFF',
   black: '#000000',
   leaf: '#03332D',
   fontGray: '#545454',
   orange: '#F3781F',
-  lightOrange: ''
+  lightOrange: '',
+  purple: '#7A6CAE'
 };
 
 const headerStyle = css`

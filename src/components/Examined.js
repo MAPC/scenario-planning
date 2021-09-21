@@ -24,7 +24,6 @@ const Examined = () => {
                     <h3>Four Key Uncertainties Examined</h3>
                 </div>
                 <Key4 />
-                {/* <Key4 /> */}
             </div>
         </div>
     )
