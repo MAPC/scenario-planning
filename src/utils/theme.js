@@ -2,6 +2,7 @@ import { css, jsx } from '@emotion/react';
 import background from "../assets/background-blur-out-focus-bokeh-traffic-jams-road-repairs-accidents-red-brake-lights-stopped-cars-scaled-panorama.jpg";
 import key1bg from "../assets/Image20@2x.png";
 import triangleAccordion from "../assets/triangle-accordion.png";
+import triangleRightOrange from "../assets/triangle-right-orange@2x.png";
 
 const fonts = {
   calibre: "'Calibre', sans-serif",
@@ -185,6 +186,11 @@ const sectionStyle1 = css`
   height: auto;
   position: relative;
   
+  .row {
+    width: 100vw;
+    // --bs-gutter-x: none;
+  }
+
   .section-content {
     width: 80%;
     padding: 10rem 4rem 0 14rem;
@@ -254,7 +260,9 @@ const sectionStyle1 = css`
   }
 
   .section-images {
-    padding: 10rem 0;
+    width: 10%;
+    padding: 5rem 0;
+    overflow: hidden;
 
     .triangle-large {
       // width: 30rem;
@@ -326,6 +334,258 @@ const keyStyle = css`
   }
 `;
 
+const deckText = css`
+height: auto;
+width: auto;
+padding: 6rem 14rem;
+background: linear-gradient(180deg, rgb(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.8) 75%, rgba(255,255,255,0) 100%); 
+h3 {
+  font-weight: 300;
+  margin: 0 0 24px;
+}
+p {
+  font-family: ${fonts.swiftNeueLtPro};
+  font-size: 16px;
+}
+`;
+
+const slide0 = css`
+  border: 5px solid ${themeColors.orange};
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: ${themeColors.orange};
+  color: white;
+  font-family: ${fonts.calibre};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  h1 { 
+    font-size: 44px; 
+    padding-bottom: 20px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+  .triangle-right {
+    padding: 1%;
+  }
+`;
+
+const slide1 = css`
+  border: 5px solid ${themeColors.orange};
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: white;
+  color: black;
+  font-family: ${fonts.calibre};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  h1 { 
+    font-size: 36px; 
+    line-height: 4rem;
+    color: ${themeColors.orange};
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 6rem;
+    padding-top: 3rem; 
+    color: ${themeColors.orange};
+  }
+  ul {
+    width: 50%;
+  }
+  li {
+    list-style-image: url(${triangleRightOrange});
+    padding: 8px;
+    margin-left: 20px;
+  }
+  img {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    margin-top: 10rem;
+  }
+`;
+
+const slide2 = css`
+  border: 5px solid ${themeColors.orange};
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: white;
+  color: black;
+  font-family: ${fonts.calibre};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  h1 { 
+    font-size: 36px; 
+    line-height: 4rem;
+    color: ${themeColors.orange};
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 6rem;
+    padding-top: 3rem; 
+    color: ${themeColors.orange};
+  }
+  li {
+    list-style-image: url(${triangleRightOrange});
+    padding: 8px;
+    margin-left: 20px;
+  }
+`;
+
+const slide3 = css`
+  border: 5px solid ${themeColors.orange};
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: white;
+  color: black;
+  font-family: ${fonts.calibre};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  h1 { 
+    font-size: 36px; 
+    line-height: 4rem;
+    color: ${themeColors.orange};
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 6rem;
+    padding-top: 3rem; 
+    color: ${themeColors.orange};
+  }
+  li {
+    list-style-image: url(${triangleRightOrange});
+    padding: 8px;
+    margin-left: 20px;
+  }
+`;
+
+const slide4 = css`
+  border: 5px solid ${themeColors.orange};
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: white;
+  color: black;
+  font-family: ${fonts.calibre};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  h1 { 
+    font-size: 36px; 
+    line-height: 4rem;
+    color: ${themeColors.orange};
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 6rem;
+    padding-top: 3rem; 
+    color: ${themeColors.orange};
+  }
+  ul {
+    width: 50%;
+  }
+  li {
+    list-style-image: url(${triangleRightOrange});
+    padding: 8px;
+    margin-left: 20px;
+  }
+  img#triangle-quad {
+    position: absolute;
+    right: -6rem;
+    top: 0;
+    margin-top: 10rem;
+  }
+`;
+
+const slide5 = css`
+  border: 5px solid ${themeColors.orange};
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: white;
+  color: black;
+  font-family: ${fonts.calibre};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  h1 { 
+    font-size: 36px; 
+    line-height: 4rem;
+    color: ${themeColors.orange};
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+  h3 {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 6rem;
+    padding-top: 3rem; 
+    color: ${themeColors.orange};
+  }
+  li {
+    list-style-image: url(${triangleRightOrange});
+    padding: 8px;
+    margin-left: 20px;
+  }
+`;
+
+const slide6 = css`
+  border: 5px solid ${themeColors.orange};
+  height: 90vh;
+  padding: 4rem 6rem;
+  background: ${themeColors.orange};
+  color: white;
+  font-family: ${fonts.calibre};
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export { 
   fonts, 
   themeColors, 
@@ -338,5 +598,13 @@ export {
   sectionStyle1, 
   liTitle,
   sectionStyle2,
-  keyStyle 
+  keyStyle,
+  deckText,
+  slide0,
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6 
 };

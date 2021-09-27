@@ -2,15 +2,16 @@
 
 import React, { useState } from "react";
 import { css, jsx } from '@emotion/react';
-import { sectionStyle1, keyStyle, themeColors, fonts } from "../utils/theme";
+import { deckText, slide0, slide1, slide2, slide3, slide4, slide5, slide6, themeColors, fonts } from "../utils/theme";
 import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";
 import key3Data from "../utils/key3Data";
-// import { ReactComponent as triangleRight } from "../assets/triangle-right.svg";
 import triangleRight from "../assets/triangle-right.svg";
 import triangleRightOrange from "../assets/triangle-right-orange@2x.png";
-import travelDeckBg from "../assets/deck-backgrounds/mapc-skyline.jpeg";
+import economyBg from "../assets/deck-backgrounds/mapc-skyline.jpeg";
+import travelBg from "../assets/deck-backgrounds/Traffic-heading-south-on-the-Southeast-Expressway_Credit-John-Wilcox.jpg";
+import demographicsBg from "../assets/deck-backgrounds/everett_aerial_km_googlestview.jpg";
 import triangleQuad from "../assets/Group-117@2x.png";
 import trafficGraphic from "../assets/Group-102@2x.png";
 
@@ -32,74 +33,11 @@ const responsive = {
 class Key4 extends React.Component {
   state = { additionalTransfrom: 0 };
   render() {
-    const CustomSlider = ({ carouselState }) => {
-      let value = 0;
-      let carouselItemWidth = 0;
-      if (this.Carousel) {
-        carouselItemWidth = this.Carousel.state.itemWidth;
-        const maxTranslateX = Math.round(
-          // so that we don't over-slide
-          carouselItemWidth *
-            (this.Carousel.state.totalItems -
-              this.Carousel.state.slidesToShow) +
-            150
-        );
-        value = maxTranslateX / 100; // calculate the unit of transform for the slider
-      }
-      const { transform } = carouselState;
-      
-      return (
-        <div className="custom-slider">
-          <input
-            type="range"
-            value={Math.round(Math.abs(transform) / value)}
-            defaultValue={0}
-            max={
-              (carouselItemWidth *
-                (carouselState.totalItems - carouselState.slidesToShow) +
-                (this.state.additionalTransfrom === 150 ? 0 : 150)) /
-              value
-            }
-            onChange={e => {
-              if (this.Carousel.isAnimationAllowed) {
-                this.Carousel.isAnimationAllowed = false;
-              }
-              const nextTransform = e.target.value * value;
-              const nextSlide = Math.round(nextTransform / carouselItemWidth);
-              if (
-                e.target.value == 0 &&
-                this.state.additionalTransfrom === 150
-              ) {
-                this.Carousel.isAnimationAllowed = true;
-                this.setState({ additionalTransfrom: 0 });
-              }
-              this.Carousel.setState({
-                transform: -nextTransform, // padding 20px and 5 items.
-                currentSlide: nextSlide
-              });
-            }}
-            className="custom-slider__input"
-          />
-        </div>
-      );
-    };
     return (
       <div>
         {/* Economy Deck */}
-        <div css={css`background-image: url(${travelDeckBg}); background-position: center; background-size: cover;`}>
-            <div css={css`
-                height: auto;
-                width: auto;
-                margin: 0 14rem 6rem;
-                h3 {
-                  font-weight: 300;
-                  margin: 0 0 24px;
-                }
-                p {
-                  font-family: ${fonts.swiftNeueLtPro};
-                  font-size: 16px;
-                }
-            `}>
+        <div css={css`background-image: url(${economyBg}); background-position: center; background-size: cover;`}>
+            <div css={deckText}>
                 <h3>A Changing Economy</h3>
                 <p>How many jobs Greater Boston will offer in 2050, and in which industries and occupations, are factors that can’t be known for sure – but they’ll influence the region profoundly. That makes our future economy a major uncertainty for which we must prepare.</p>
                 <p>There are some things we know about our thirty-years-from-now economy: it will be made up of workers – regardless of how much of life becomes automated. And some goods and services will be the same as ours today, and some will be different.</p>
@@ -120,7 +58,6 @@ class Key4 extends React.Component {
                         ssr={false}
                         ref={el => (this.Carousel = el)}
                         partialVisbile={false}
-                        customButtonGroup={<CustomSlider />}
                         itemClass="slider-image-item"
                         responsive={responsive}
                         containerClass="carousel-container-with-scrollbar"
@@ -136,29 +73,7 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={css`
-                          border: 5px solid ${themeColors.orange};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.orange};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          h1 { 
-                            font-size: 44px; 
-                            padding-bottom: 20px;
-                          }
-                          h2 {
-                            font-size: 24px;
-                            line-height: 28px;
-                            padding-bottom: 20px;
-                          }
-                          .triangle-right {
-                            padding: 1%;
-                          }
-                        `}
+                        css={slide0}
                       >
                         <div>
                           <h1>A Changing Economy</h1>
@@ -171,50 +86,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.orange};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.orange};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.orange};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img {
-                          position: absolute;
-                          right: 1rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide1}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -228,41 +100,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={css`
-                        border: 5px solid ${themeColors.orange};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.orange};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.orange};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                      `}
+                        css={slide2}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -275,41 +113,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.orange};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.orange};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.orange};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide3}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -322,50 +126,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.orange};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.orange};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.orange};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img#triangle-quad {
-                          position: absolute;
-                          right: -6rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide4}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -379,41 +140,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.orange};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.orange};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.orange};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide5}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -429,20 +156,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={css`
-                          border: 5px solid ${themeColors.orange};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.orange};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          display: flex;
-                          justify-content: center;
-                          align-items: center;
-                          `}
+                          css={slide6}
                         >
                           <h2>Learn more about MAPC's research on the future of work <a href="https://www.mapc.org/planning101/the-future-of-work-data-and-policies-to-shape-greater-bostons-recovery/">here</a>​.</h2>
                         </div>
@@ -455,20 +169,8 @@ class Key4 extends React.Component {
             </div>
         </div>
         {/* Travel Deck */}
-        <div css={css`background-image: url(${travelDeckBg}); background-position: center; background-size: cover;`}>
-            <div css={css`
-                height: auto;
-                width: auto;
-                margin: 6rem 14rem;
-                h3 {
-                  font-weight: 300;
-                  margin: 24px 0;
-                }
-                p {
-                  font-family: ${fonts.swiftNeueLtPro};
-                  font-size: 16px;
-                }
-            `}>
+        <div css={css`background-image: url(${travelBg}); background-position: center; background-size: cover;`}>
+            <div css={deckText}>
                 <h3>The Future of Travel</h3>
                 <p>Transportation is a fundamentally regional issue – people travel all throughout Metro Boston, and we all share a network of roadways, transit systems, bike routes, and other infrastructure. It is already clear that the transportation system of today is incapable of meeting the needs of tomorrow. Congestion is among the worst in the nation; commuters of color experience disproportionately long commutes when compared to White commuters; transportation produces a third of our GHG emissions; deferred maintenance undermines safety and reliability; and subways and roadways are already disrupted during major storms.</p>
                 <p>Meeting the transportation challenges of the future will require both regional coordination and local action. It will also require a sense of how the region’s travel needs, vehicles, and transportation services may change over the coming decades.  As with other uncertainties, some aspects of future travel are relatively certain: most trips will start and end in places that are already built up; most travelers will value speed and convenience over other considerations; and highway expansion just induces more demand and congestion.</p>
@@ -490,7 +192,6 @@ class Key4 extends React.Component {
                         ssr={false}
                         ref={el => (this.Carousel = el)}
                         partialVisbile={false}
-                        customButtonGroup={<CustomSlider />}
                         itemClass="slider-image-item"
                         responsive={responsive}
                         containerClass="carousel-container-with-scrollbar"
@@ -506,29 +207,7 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={css`
-                          border: 5px solid ${themeColors.purple};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.purple};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          h1 { 
-                            font-size: 44px; 
-                            padding-bottom: 20px;
-                          }
-                          h2 {
-                            font-size: 24px;
-                            line-height: 28px;
-                            padding-bottom: 20px;
-                          }
-                          .triangle-right {
-                            padding: 1%;
-                          }
-                        `}
+                        css={slide0}
                       >
                         <div>
                           <h1>The Future of Travel</h1>
@@ -541,50 +220,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.purple};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.purple};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.purple};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img {
-                          position: absolute;
-                          right: 1rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide1}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -598,41 +234,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={css`
-                        border: 5px solid ${themeColors.purple};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.purple};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.purple};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                      `}
+                        css={slide2}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -648,41 +250,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.purple};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.purple};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.purple};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide3}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -698,50 +266,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.purple};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.purple};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.purple};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img#triangle-quad {
-                          position: absolute;
-                          right: -6rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide4}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -755,41 +280,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.purple};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.purple};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.purple};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide5}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -805,20 +296,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={css`
-                          border: 5px solid ${themeColors.purple};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.purple};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          display: flex;
-                          justify-content: center;
-                          align-items: center;
-                          `}
+                          css={slide6}
                         >
                           <h2>Learn more through MAPC's research on the <a href="https://www.mapc.org/wp-content/uploads/2021/02/Feb2021-Ecommerce-Report.pdf">impact of ecommerce</a>, <a href="https://www.mapc.org/resource-library/the-growing-carbon-footprint-of-ride-hailing-in-massachusetts/">TNCs</a>, and <a href="https://www.mapc.org/resource-library/autonomous-vehicles/">automated vehicle technology.</a></h2>
                         </div>
@@ -831,23 +309,8 @@ class Key4 extends React.Component {
             </div>
         </div>
         {/* Policy Deck */}
-        <div css={css`background-image: url(${travelDeckBg}); background-position: center; background-size: cover;`}>
-            <div css={css`
-                height: auto;
-                width: auto;
-                margin: 6rem 14rem;
-                font-size: 16px;
-                h3 {
-                  font-weight: 300;
-                  margin: 24px 0;
-                }
-                p {
-                  font-family: ${fonts.swiftNeueLtPro};
-                }
-                li {
-                  font-family: ${fonts.swiftNeueLtPro}; 
-                }
-            `}>
+        <div css={css`background-image: url(${economyBg}); background-position: center; background-size: cover;`}>
+            <div css={deckText}>
                 <h3>The Future of Federal Policy​</h3>
                 <p>In addition to the many behavioral, economic, and technological factors that are out of our control, political decisions at the federal level will have a profound influence on our future.</p>
                 <p>This plan was created during a period of great political uncertainty at the federal level. While some of this uncertainty may seem to ebb and flow with the two- and four- year election cycles, it is certain that things will look different in 2030 and 2050 than they do today.</p>
@@ -873,7 +336,6 @@ class Key4 extends React.Component {
                         ssr={false}
                         ref={el => (this.Carousel = el)}
                         partialVisbile={false}
-                        customButtonGroup={<CustomSlider />}
                         itemClass="slider-image-item"
                         responsive={responsive}
                         containerClass="carousel-container-with-scrollbar"
@@ -889,29 +351,7 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={css`
-                          border: 5px solid ${themeColors.turquoise};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.turquoise};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          h1 { 
-                            font-size: 44px; 
-                            padding-bottom: 20px;
-                          }
-                          h2 {
-                            font-size: 24px;
-                            line-height: 28px;
-                            padding-bottom: 20px;
-                          }
-                          .triangle-right {
-                            padding: 1%;
-                          }
-                        `}
+                        css={slide0}
                       >
                         <div>
                           <h1>The Future of Federal Policy​</h1>
@@ -924,50 +364,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.turquoise};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.turquoise};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.turquoise};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img {
-                          position: absolute;
-                          right: 1rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide1}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -980,41 +377,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={css`
-                        border: 5px solid ${themeColors.turquoise};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.turquoise};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.turquoise};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                      `}
+                        css={slide2}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1028,41 +391,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.turquoise};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.turquoise};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.turquoise};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide3}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1076,50 +405,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.turquoise};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.turquoise};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.turquoise};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img#triangle-quad {
-                          position: absolute;
-                          right: -6rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide4}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1133,41 +419,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.turquoise};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.turquoise};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.turquoise};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide5}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1182,20 +434,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={css`
-                          border: 5px solid ${themeColors.turquoise};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.turquoise};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          display: flex;
-                          justify-content: center;
-                          align-items: center;
-                          `}
+                          css={slide6}
                         >
                           <h2>Learn more about MAPC's research on <a href="https://climate-vulnerability.mapc.org/">climate vulnerability</a>, <a href="https://metrocommon.mapc.org/reports/17">sea level rise</a>, and <a href="https://www.mapc.org/get-involved/legislative-priorities/">legislative policy</a>.​</h2>
                         </div>
@@ -1208,20 +447,8 @@ class Key4 extends React.Component {
             </div>
         </div>
         {/* Demographics Deck */}
-        <div css={css`background-image: url(${travelDeckBg}); background-position: center; background-size: cover;`}>
-            <div css={css`
-                height: auto;
-                width: auto;
-                margin: 6rem 14rem;
-                h3 {
-                  font-weight: 300;
-                  margin: 24px 0;
-                }
-                p {
-                  font-family: ${fonts.swiftNeueLtPro};
-                  font-size: 16px;
-                }
-            `}>
+        <div css={css`background-image: url(${demographicsBg}); background-position: center; background-size: cover;`}>
+            <div css={deckText}>
                 <h3>Demographic Change</h3>
                 <p>In order to plan for an equitable, sustainable, and prosperous region in 2050, we need some sense of who we are planning for. How many people should we expect? How many will be young or old? How many and what kind of units will be needed to house them? Answers to these questions will determine what type of housing the region will need, the transportation services we must invest in, along with what other public services state and local governments must provide.</p>
                 <p>The basic components of population change are simple: everyone gets older at the same rate; babies are being born every day; some people move out of the region, while others move in; and some of our current residents will pass away before 2050. An understanding of the basic trends in these elements can allow us to prepare for generational shifts over time.</p>
@@ -1242,7 +469,6 @@ class Key4 extends React.Component {
                         ssr={false}
                         ref={el => (this.Carousel = el)}
                         partialVisbile={false}
-                        customButtonGroup={<CustomSlider />}
                         itemClass="slider-image-item"
                         responsive={responsive}
                         containerClass="carousel-container-with-scrollbar"
@@ -1258,29 +484,8 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={css`
-                          border: 5px solid ${themeColors.teal};
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.teal};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          h1 { 
-                            font-size: 44px; 
-                            padding-bottom: 20px;
-                          }
-                          h2 {
-                            font-size: 24px;
-                            line-height: 28px;
-                            padding-bottom: 20px;
-                          }
-                          .triangle-right {
-                            padding: 1%;
-                          }
-                        `}
+                        css={slide0}
+                        style={{background: "red"}}
                       >
                         <div>
                           <h1>Demographic Change</h1>
@@ -1293,50 +498,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.teal};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.teal};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.teal};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img {
-                          position: absolute;
-                          right: 1rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide1}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1349,41 +511,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={css`
-                        border: 5px solid ${themeColors.teal};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.teal};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.teal};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                      `}
+                        css={slide2}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1397,41 +525,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.teal};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.teal};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.teal};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide3}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1446,50 +540,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.teal};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.teal};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.teal};
-                        }
-                        ul {
-                          width: 50%;
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        img#triangle-quad {
-                          position: absolute;
-                          right: -6rem;
-                          top: 0;
-                          margin-top: 10rem;
-                        }
-                        `}
+                        css={slide4}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1503,41 +554,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={css`
-                        border: 5px solid ${themeColors.teal};
-                        height: 90vh;
-                        padding: 4rem 6rem;
-                        background: white;
-                        color: black;
-                        font-family: ${fonts.calibre};
-                        font-weight: 200;
-                        font-size: 16px;
-                        line-height: 18px;
-                        h1 { 
-                          font-size: 36px; 
-                          line-height: 4rem;
-                          color: ${themeColors.teal};
-                        }
-                        h2 {
-                          font-size: 24px;
-                          line-height: 28px;
-                          padding-bottom: 20px;
-                        }
-                        h3 {
-                          font-size: 20px;
-                          position: absolute;
-                          right: 0;
-                          top: 0;
-                          padding-right: 6rem;
-                          padding-top: 3rem; 
-                          color: ${themeColors.teal};
-                        }
-                        li {
-                          list-style-image: url(${triangleRightOrange});
-                          padding: 8px;
-                          margin-left: 20px;
-                        }
-                        `}
+                        css={slide5}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -1552,19 +569,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={css`
-                          height: 90vh;
-                          padding: 4rem 6rem;
-                          background: ${themeColors.teal};
-                          color: white;
-                          font-family: ${fonts.calibre};
-                          font-weight: 200;
-                          font-size: 16px;
-                          line-height: 18px;
-                          display: flex;
-                          justify-content: center;
-                          align-items: center;
-                          `}
+                          css={slide6}
                         >
                           <h2>Read more about our research on demographics and scenarios for the future <a href="https://mapc365.sharepoint.com/:w:/s/MetroCommon2050Team/EQFrxK91iipPiSUZOvhQJEABWnw_H_CN_hy4KmSQ2cEf8A?e=hVSiHP">here​</a>.</h2>
                         </div>
