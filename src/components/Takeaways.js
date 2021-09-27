@@ -18,7 +18,7 @@ const Takeaways = () => {
         <div>
             <Container css={sectionStyle1}>
                 <Row width="100vw">
-                <Col className="section-content" md={5} lg={5}>
+                <Col className="section-content">
                     <h3>Key Takeaways from Engagement</h3>
                     <p>Over the course of the MetroCommon planning effort we engaged people in the region to better understand what it means to be ready for uncertainty. Our discussions led to <span className="teal-text">four main takeaways</span> to better plan for policy and action.</p>
                     <ul>
@@ -54,14 +54,6 @@ const Takeaways = () => {
                 </Col>
                 <Col className="section-images">
                     <img src={triangleQuadrant} alt="Notecards, gathering of people, light teal triangle, dark teal triangle" />
-                    {/* <Row>
-                        <img className="triangle-large" src={topImage} alt="Notecards" />
-                        <img className="triangle-large" src={bottomImage} alt="Gathering of People" />
-                    </Row>
-                    <Row>
-                        <img className="triangle-large" src={triangleRight1} alt="Light Teal Triangle"/>
-                        <img className="triangle-large" src={triangleRight2} alt="Dark Teal Triangle"/>
-                    </Row> */}
                 </Col>
                 </Row>
             </Container>
