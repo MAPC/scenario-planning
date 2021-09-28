@@ -2,7 +2,29 @@
 
 import React, { useState } from "react";
 import { css, jsx } from '@emotion/react';
-import { deckText, slide0, slide1, slide2, slide3, slide4, slide5, slide6, tealFont, tealBorder, tealBg, themeColors, fonts } from "../utils/theme";
+import { 
+  deckText, 
+  slide0, 
+  slide1, 
+  slide2, 
+  slide3, 
+  slide4, 
+  slide5, 
+  slide6, 
+  tealFont, 
+  tealBorder, 
+  tealBg, 
+  turquoiseFont,
+  turquoiseBorder,
+  turquoiseBg, 
+  purpleFont,
+  purpleBorder,
+  purpleBg,
+  orangeFont,
+  orangeBorder,
+  orangeBg,
+  themeColors, 
+  fonts } from "../utils/theme";
 import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";
@@ -11,7 +33,8 @@ import triangleRight from "../assets/triangle-right.svg";
 import triangleRightOrange from "../assets/triangle-right-orange@2x.png";
 import economyBg from "../assets/deck-backgrounds/mapc-skyline.jpeg";
 import travelBg from "../assets/deck-backgrounds/Traffic-heading-south-on-the-Southeast-Expressway_Credit-John-Wilcox.jpg";
-import demographicsBg from "../assets/deck-backgrounds/everett_aerial_km_googlestview.jpg";
+import policyBg from "../assets/deck-backgrounds/Credit_Alex_Koppelman_Dorchester_Quincy_Area_.jpg"
+import demographicsBg from "../assets/deck-backgrounds/Kendall_3.jpg";
 import triangleQuad from "../assets/Group-117@2x.png";
 import trafficGraphic from "../assets/Group-102@2x.png";
 
@@ -34,14 +57,14 @@ class Key4 extends React.Component {
   state = { additionalTransfrom: 0 };
   render() {
 
-    const CustomRightArrow = ({ onClick, ...rest }) => {
-      const {
-        onMove,
-        carouselState: { currentSlide, deviceType }
-      } = rest;
-      // onMove means if dragging or swiping in progress.
-      return <button onClick={() => onClick()} />;
-    }; 
+    // const CustomRightArrow = ({ onClick, ...rest }) => {
+    //   const {
+    //     onMove,
+    //     carouselState: { currentSlide, deviceType }
+    //   } = rest;
+    //   // onMove means if dragging or swiping in progress.
+    //   return <button onClick={() => onClick()} />;
+    // }; 
 
     return (
       <div>
@@ -84,7 +107,7 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={slide0}
+                        css={[slide0, orangeBorder, orangeBg]}
                       >
                         <div>
                           <h1>A Changing Economy</h1>
@@ -97,10 +120,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={slide1}
+                        css={[slide1, orangeBorder, orangeFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>A Changing Economy × MetroCommon 2050</h3>
                           <h1>What We Know:</h1>
                           <ul>
                             <li>Wage polarization, benefits elimination, and worker reclassification has reduced economic security for many workers. That trend will likely continue if unchecked.</li>
@@ -111,10 +134,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={slide2}
+                        css={[slide2, orangeBorder, orangeFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>A Changing Economy × MetroCommon 2050</h3>
                           <h1>What We Know:</h1>
                           <ul>
                             <li>The demand for care work and other in-person jobs that require human skill and emotional intelligence will likely grow.​</li>
@@ -124,10 +147,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={slide3}
+                        css={[slide3, orangeBorder, orangeFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>A Changing Economy × MetroCommon 2050</h3>
                           <h1>What We Don't Know:</h1>
                           <ul>
                             <li>Changes in higher education may fundamentally alter the region’s role as a magnet for students and researchers. Nationally, the population of college-age people has declined. Add to that, there’s an increase in the quality and perceived value of remote learning, and a growing aversion to student debt. Will these or other factors reduce enrollment at universities and the number of students living and working in the region?​</li>
@@ -137,10 +160,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={slide4}
+                        css={[slide4, orangeBorder, orangeFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>A Changing Economy × MetroCommon 2050</h3>
                           <h1>Takeaways:</h1>
                           <h2>Possible Solutions</h2>
                           <ul>
@@ -151,10 +174,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={slide5}
+                        css={[slide5, orangeBorder, orangeFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>A Changing Economy × MetroCommon 2050</h3>
                           <h1>Takeaways:</h1>
                           <h2>Possible Solutions</h2>
                           <ul>
@@ -167,7 +190,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={slide6}
+                          css={[slide6, orangeBorder, orangeBg]}
                         >
                           <h2>Learn more about MAPC's research on the future of work <a href="https://www.mapc.org/planning101/the-future-of-work-data-and-policies-to-shape-greater-bostons-recovery/">here</a>​.</h2>
                         </div>
@@ -218,7 +241,7 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={slide0}
+                        css={[slide0, purpleBorder, purpleBg]}
                       >
                         <div>
                           <h1>The Future of Travel</h1>
@@ -231,7 +254,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={slide1}
+                        css={[slide1, purpleBorder, purpleFont]}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -245,7 +268,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={slide2}
+                        css={[slide2, purpleBorder, purpleFont]}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -261,7 +284,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={slide3}
+                        css={[slide3, purpleBorder, purpleFont]}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -277,7 +300,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={slide4}
+                        css={[slide4, purpleBorder, purpleFont]}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -291,7 +314,7 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={slide5}
+                        css={[slide5, purpleBorder, purpleFont]}
                       >
                         <div>
                           <h3>The Future of Travel × MetroCommon 2050</h3>
@@ -307,7 +330,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={slide6}
+                          css={[slide6, purpleBorder, purpleBg]}
                         >
                           <h2>Learn more through MAPC's research on the <a href="https://www.mapc.org/wp-content/uploads/2021/02/Feb2021-Ecommerce-Report.pdf">impact of ecommerce</a>, <a href="https://www.mapc.org/resource-library/the-growing-carbon-footprint-of-ride-hailing-in-massachusetts/">TNCs</a>, and <a href="https://www.mapc.org/resource-library/autonomous-vehicles/">automated vehicle technology.</a></h2>
                         </div>
@@ -320,7 +343,7 @@ class Key4 extends React.Component {
             </div>
         </div>
         {/* Policy Deck */}
-        <div css={css`background-image: url(${economyBg}); background-position: center; background-size: cover;`}>
+        <div css={css`background-image: url(${policyBg}); background-position: center; background-size: cover;`}>
             <div css={deckText}>
                 <h3>The Future of Federal Policy​</h3>
                 <p>In addition to the many behavioral, economic, and technological factors that are out of our control, political decisions at the federal level will have a profound influence on our future.</p>
@@ -362,7 +385,7 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={slide0}
+                        css={[slide0, turquoiseBorder, turquoiseBg]}
                       >
                         <div>
                           <h1>The Future of Federal Policy​</h1>
@@ -375,10 +398,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={slide1}
+                        css={[slide1, turquoiseBorder, turquoiseFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>The Future of Federal Policy​ × MetroCommon 2050</h3>
                           <h1>What We Know:</h1>
                           <ul>
                             <li>Federal investments in research, healthcare, and education are important drivers of the region’s economy.​</li>
@@ -388,10 +411,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={slide2}
+                        css={[slide2, turquoiseBorder, turquoiseFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>The Future of Federal Policy​ × MetroCommon 2050</h3>
                           <h1>What We Know:</h1>
                           <ul>
                             <li>Public entities and individual homeowners are highly dependent on federal support for disaster response and recovery.​</li>
@@ -402,10 +425,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={slide3}
+                        css={[slide3, turquoiseBorder, turquoiseFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>The Future of Federal Policy​ × MetroCommon 2050</h3>
                           <h1>What We Don't Know:</h1>
                           <ul>
                             <li>Federal climate policy and U.S. leadership at the international level is essential to achieve global greenhouse gas (GHG) reductions and mitigate the worst impacts of climate change. The current administration has taken a proactive approach. Will these policies continue?</li>
@@ -416,10 +439,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={slide4}
+                        css={[slide4, turquoiseBorder, turquoiseFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>The Future of Federal Policy​ × MetroCommon 2050</h3>
                           <h1>Takeaways:</h1>
                           <h2>Possible Solutions</h2>
                           <ul>
@@ -430,10 +453,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={slide5}
+                        css={[slide5, turquoiseBorder, turquoiseFont]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>The Future of Federal Policy​ × MetroCommon 2050</h3>
                           <h1>Takeaways:</h1>
                           <h2>Possible Solutions</h2>
                           <ul>
@@ -445,7 +468,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={slide6}
+                          css={[slide6, turquoiseBorder, turquoiseBg]}
                         >
                           <h2>Learn more about MAPC's research on <a href="https://climate-vulnerability.mapc.org/">climate vulnerability</a>, <a href="https://metrocommon.mapc.org/reports/17">sea level rise</a>, and <a href="https://www.mapc.org/get-involved/legislative-priorities/">legislative policy</a>.​</h2>
                         </div>
