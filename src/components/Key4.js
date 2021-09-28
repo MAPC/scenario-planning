@@ -33,6 +33,16 @@ const responsive = {
 class Key4 extends React.Component {
   state = { additionalTransfrom: 0 };
   render() {
+
+    const CustomRightArrow = ({ onClick, ...rest }) => {
+      const {
+        onMove,
+        carouselState: { currentSlide, deviceType }
+      } = rest;
+      // onMove means if dragging or swiping in progress.
+      return <button onClick={() => onClick()} />;
+    }; 
+
     return (
       <div>
         {/* Economy Deck */}
@@ -58,6 +68,7 @@ class Key4 extends React.Component {
                         ssr={false}
                         ref={el => (this.Carousel = el)}
                         partialVisbile={false}
+                        // customRightArrow={<CustomRightArrow />}
                         itemClass="slider-image-item"
                         responsive={responsive}
                         containerClass="carousel-container-with-scrollbar"

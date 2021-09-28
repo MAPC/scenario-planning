@@ -47,12 +47,46 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   padding: 20px 0 20px 20px;
 }
 
+button {
+  background-color: none;
+  border: none;
+}
+
+.react-multiple-carousel__arrow {
+  border-radius: 0;
+  background: none;
+  /* min-height: 80px;
+  min-width: 80px; */
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background: none;
+  opacity: 1;
+  width: 160px;
+  /* height: 220px; */
+  transition: ease-in-out 0.4s all;
+}
+
+.react-multiple-carousel__arrow--left::before {
+  content: url(../assets/triangle-right-dark@2x.png);
+  transform: scaleX(-1);
+}
+
+.react-multiple-carousel__arrow--left::after {
+  background-color: none;
+}
+
 .react-multiple-carousel__arrow--right {
   right: calc(33% + 1px);
 }
 
-/* originally
-  .react-multiple-carousel__arrow--right {
-  right: calc(4% + 1px);
-} */
+.react-multiple-carousel__arrow--right::before {
+  content: url(../assets/triangle-right-dark@2x.png);
+}
 
+.react-multiple-carousel__arrow--right::after {
+  background-color: none;
+}
