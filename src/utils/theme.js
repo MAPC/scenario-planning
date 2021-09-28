@@ -350,10 +350,9 @@ p {
 `;
 
 const slide0 = css`
-  border: 5px solid ${themeColors.orange};
+  border: 5px solid;
   height: 90vh;
   padding: 4rem 6rem;
-  background: ${themeColors.orange};
   color: white;
   font-family: ${fonts.calibre};
   font-weight: 200;
@@ -374,7 +373,7 @@ const slide0 = css`
 `;
 
 const slide1 = css`
-  border: 5px solid ${themeColors.orange};
+  border: 5px solid;
   height: 90vh;
   padding: 4rem 6rem;
   background: white;
@@ -386,7 +385,6 @@ const slide1 = css`
   h1 { 
     font-size: 36px; 
     line-height: 4rem;
-    color: ${themeColors.orange};
   }
   h2 {
     font-size: 24px;
@@ -400,7 +398,6 @@ const slide1 = css`
     top: 0;
     padding-right: 6rem;
     padding-top: 3rem; 
-    color: ${themeColors.orange};
   }
   ul {
     width: 50%;
@@ -419,7 +416,7 @@ const slide1 = css`
 `;
 
 const slide2 = css`
-  border: 5px solid ${themeColors.orange};
+  border: 5px solid;
   height: 90vh;
   padding: 4rem 6rem;
   background: white;
@@ -431,7 +428,6 @@ const slide2 = css`
   h1 { 
     font-size: 36px; 
     line-height: 4rem;
-    color: ${themeColors.orange};
   }
   h2 {
     font-size: 24px;
@@ -445,7 +441,6 @@ const slide2 = css`
     top: 0;
     padding-right: 6rem;
     padding-top: 3rem; 
-    color: ${themeColors.orange};
   }
   li {
     list-style-image: url(${triangleRightOrange});
@@ -455,7 +450,7 @@ const slide2 = css`
 `;
 
 const slide3 = css`
-  border: 5px solid ${themeColors.orange};
+  border: 5px solid;
   height: 90vh;
   padding: 4rem 6rem;
   background: white;
@@ -467,7 +462,6 @@ const slide3 = css`
   h1 { 
     font-size: 36px; 
     line-height: 4rem;
-    color: ${themeColors.orange};
   }
   h2 {
     font-size: 24px;
@@ -481,7 +475,6 @@ const slide3 = css`
     top: 0;
     padding-right: 6rem;
     padding-top: 3rem; 
-    color: ${themeColors.orange};
   }
   li {
     list-style-image: url(${triangleRightOrange});
@@ -491,7 +484,7 @@ const slide3 = css`
 `;
 
 const slide4 = css`
-  border: 5px solid ${themeColors.orange};
+  border: 5px solid;
   height: 90vh;
   padding: 4rem 6rem;
   background: white;
@@ -503,7 +496,6 @@ const slide4 = css`
   h1 { 
     font-size: 36px; 
     line-height: 4rem;
-    color: ${themeColors.orange};
   }
   h2 {
     font-size: 24px;
@@ -517,7 +509,6 @@ const slide4 = css`
     top: 0;
     padding-right: 6rem;
     padding-top: 3rem; 
-    color: ${themeColors.orange};
   }
   ul {
     width: 50%;
@@ -536,7 +527,7 @@ const slide4 = css`
 `;
 
 const slide5 = css`
-  border: 5px solid ${themeColors.orange};
+  border: 5px solid;
   height: 90vh;
   padding: 4rem 6rem;
   background: white;
@@ -548,7 +539,6 @@ const slide5 = css`
   h1 { 
     font-size: 36px; 
     line-height: 4rem;
-    color: ${themeColors.orange};
   }
   h2 {
     font-size: 24px;
@@ -562,7 +552,6 @@ const slide5 = css`
     top: 0;
     padding-right: 6rem;
     padding-top: 3rem; 
-    color: ${themeColors.orange};
   }
   li {
     list-style-image: url(${triangleRightOrange});
@@ -572,10 +561,9 @@ const slide5 = css`
 `;
 
 const slide6 = css`
-  border: 5px solid ${themeColors.orange};
+  border: 5px solid;
   height: 90vh;
   padding: 4rem 6rem;
-  background: ${themeColors.orange};
   color: white;
   font-family: ${fonts.calibre};
   font-weight: 200;
@@ -584,6 +572,48 @@ const slide6 = css`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const orangeFont = css`
+  h1, h3 {
+    color: ${themeColors.orange};
+  }
+`;
+
+const orangeBorder = css`
+  border-color: ${themeColors.orange};
+`;
+
+const orangeBg = css`
+  background: ${themeColors.orange};
+`;
+
+const purpleFont = css`
+  h1, h3 {
+    color: ${themeColors.purple};
+  }
+`;
+
+const purpleBorder = css`
+  border-color: ${themeColors.purple};
+`;
+
+const purpleBg = css`
+  background: ${themeColors.purple};
+`;
+
+const turquoiseFont = css`
+  h1, h3 {
+    color: ${themeColors.turquoise};
+  }
+`;
+
+const turquoiseBorder = css`
+  border-color: ${themeColors.turquoise};
+`;
+
+const turquoiseBg = css`
+  background: ${themeColors.turquoise};
 `;
 
 const tealFont = css`
@@ -623,5 +653,14 @@ export {
   slide6,
   tealFont,
   tealBorder,
-  tealBg 
+  tealBg,
+  turquoiseFont,
+  turquoiseBorder,
+  turquoiseBg,
+  purpleFont,
+  purpleBorder,
+  purpleBg,
+  orangeFont,
+  orangeBorder,
+  orangeBg 
 };
