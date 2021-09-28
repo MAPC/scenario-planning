@@ -586,6 +586,20 @@ const slide6 = css`
   align-items: center;
 `;
 
+const tealFont = css`
+  h1, h3 {
+    color: ${themeColors.teal};
+  }
+`;
+
+const tealBorder = css`
+  border-color: ${themeColors.teal};
+`;
+
+const tealBg = css`
+  background: ${themeColors.teal};
+`;
+
 export { 
   fonts, 
   themeColors, 
@@ -606,5 +620,8 @@ export {
   slide3,
   slide4,
   slide5,
-  slide6 
+  slide6,
+  tealFont,
+  tealBorder,
+  tealBg 
 };

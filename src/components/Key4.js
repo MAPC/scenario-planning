@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { css, jsx } from '@emotion/react';
-import { deckText, slide0, slide1, slide2, slide3, slide4, slide5, slide6, themeColors, fonts } from "../utils/theme";
+import { deckText, slide0, slide1, slide2, slide3, slide4, slide5, slide6, tealFont, tealBorder, tealBg, themeColors, fonts } from "../utils/theme";
 import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";
@@ -495,8 +495,7 @@ class Key4 extends React.Component {
                     >
                       {/* Slide 0 */}
                       <div 
-                        css={slide0}
-                        style={{background: "red"}}
+                        css={[slide0, tealBorder, tealBg]}
                       >
                         <div>
                           <h1>Demographic Change</h1>
@@ -509,10 +508,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 1 */}
                       <div 
-                        css={slide1}
+                        css={[slide1, tealFont, tealBorder]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>Demographic Change × MetroCommon 2050</h3>
                           <h1>What We Know:</h1>
                           <ul>
                             <li>Our region is getting older, and we need to prepare our housing, transportation, and other service sectors to accommodate those changes.</li>
@@ -522,10 +521,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 2 */}
                       <div
-                        css={slide2}
+                        css={[slide2, tealFont, tealBorder]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>Demographic Change × MetroCommon 2050</h3>
                           <h1>What We Know:</h1>
                           <ul>
                             <li>We’ve likely hit the peak number of children in the region through 2050.​</li>
@@ -536,10 +535,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 3 */}
                       <div 
-                        css={slide3}
+                        css={[slide3, tealFont, tealBorder]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>Demographic Change × MetroCommon 2050</h3>
                           <h1>What We Don't Know:</h1>
                           <ul>
                             <li>Will future generations have children at rates similar to those of their parents? In recent decades, birth rates in Massachusetts have declined steadily, and average maternal age has increased. In other words, mothers today tend to have fewer children, later in life. These patterns can be tracked over recent history, but how will they change going forward?​</li>
@@ -551,10 +550,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 4 */}
                       <div 
-                        css={slide4}
+                        css={[slide4, tealFont, tealBorder]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>Demographic Change × MetroCommon 2050</h3>
                           <h1>Takeaways:</h1>
                           <h2>Possible Solutions</h2>
                           <ul>
@@ -565,10 +564,10 @@ class Key4 extends React.Component {
                       </div>
                       {/* Slide 5 */}
                       <div 
-                        css={slide5}
+                        css={[slide5, tealFont, tealBorder]}
                       >
                         <div>
-                          <h3>The Future of Travel × MetroCommon 2050</h3>
+                          <h3>Demographic Change × MetroCommon 2050</h3>
                           <h1>Takeaways:</h1>
                           <h2>Possible Solutions</h2>
                           <ul>
@@ -580,7 +579,7 @@ class Key4 extends React.Component {
                       {/* Slide 6 */}
                       <div>
                         <div
-                          css={slide6}
+                          css={[slide6, tealBorder, tealBg]}
                         >
                           <h2>Read more about our research on demographics and scenarios for the future <a href="https://mapc365.sharepoint.com/:w:/s/MetroCommon2050Team/EQFrxK91iipPiSUZOvhQJEABWnw_H_CN_hy4KmSQ2cEf8A?e=hVSiHP">here​</a>.</h2>
                         </div>
