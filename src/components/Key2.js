@@ -3,13 +3,6 @@
 import * as React from "react";
 import { css, jsx } from '@emotion/react';
 import { sectionStyle1, keyStyle, themeColors } from "../utils/theme";
-import demographics0 from "../assets/key1/demographics0.png";
-import demographics1 from "../assets/key1/demographics1.jpg";
-import demographics2 from "../assets/key1/demographics2.png";
-import demographics3 from "../assets/key1/demographics3.png";
-import demographics4 from "../assets/key1/demographics4.png";
-import demographics5 from "../assets/key1/demographics5.png";
-import demographics6 from "../assets/key1/demographics6.png";
 import key1bg from "../assets/Image22@2x.png"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';

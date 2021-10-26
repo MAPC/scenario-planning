@@ -3,14 +3,6 @@
 import React, { useState } from "react";
 import { css, jsx } from '@emotion/react';
 import { sectionStyle1, keyStyle, themeColors } from "../utils/theme";
-import travel0 from "../assets/key3/travel0.jpg";
-import travel1 from "../assets/key3/travel1.png";
-import travel2 from "../assets/key3/travel2.jpg";
-import travel3 from "../assets/key3/travel3.png";
-import travel4 from "../assets/key3/travel4.png";
-import travel5 from "../assets/key3/travel5.png";
-import travel6 from "../assets/key3/travel6.png";
-import travel7 from "../assets/key3/travel7.png";
 import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";

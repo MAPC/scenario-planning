@@ -7,13 +7,6 @@ import topImage from "../assets/Mask-Group-2@2x.png";
 import bottomImage from "../assets/Mask-Group-3@2x.png";
 import triangleRight1 from "../assets/triangle-right1.png";
 import triangleRight2 from "../assets/triangle-right2.png";
-import demographics0 from "../assets/key1/demographics0.png";
-import demographics1 from "../assets/key1/demographics1.jpg";
-import demographics2 from "../assets/key1/demographics2.png";
-import demographics3 from "../assets/key1/demographics3.png";
-import demographics4 from "../assets/key1/demographics4.png";
-import demographics5 from "../assets/key1/demographics5.png";
-import demographics6 from "../assets/key1/demographics6.png";
 import key1bg from "../assets/Image22@2x.png"
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -53,65 +46,65 @@ const Key1 = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                {/* <img
                 className="d-block w-100"
                 src={demographics0}
                 alt="Second slide"
-                />
+                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                {/* <img
                 className="d-block w-100"
                 src={demographics1}
                 alt="Third slide"
-                />
+                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                {/* <img
                 className="d-block w-100"
                 src={demographics2}
                 alt="Fourth slide"
-                />
+                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                {/* <img
                 className="d-block w-100"
                 src={demographics3}
                 alt="Fifth slide"
-                />
+                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                {/* <img
                 className="d-block w-100"
                 src={demographics4}
                 alt="Third slide"
-                />
+                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                {/* <img
                 className="d-block w-100"
                 src={demographics5}
                 alt="Third slide"
-                />
+                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                {/* <img
                 className="d-block w-100"
                 src={demographics6}
                 alt="Third slide"
-                />
+                /> */}
                 <Carousel.Caption>
                     <h3>Last Slide</h3>
                 </Carousel.Caption>
