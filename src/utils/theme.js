@@ -10,6 +10,7 @@ const fonts = {
 };
 
 const themeColors = {
+  purple: '#7A6CAE',
   indigo: '#101436',
   teal: '#4CC1B9',
   lightTeal: '#ebf6f7',
@@ -20,23 +21,22 @@ const themeColors = {
   leaf: '#03332D',
   fontGray: '#545454',
   orange: '#F3781F',
-  lightOrange: '',
-  purple: '#7A6CAE'
+  lightOrange: ''
 };
 
 const headerStyle = css`
-  height: 120px;
   background-color: ${themeColors.leaf};
+  height: 120px;
   .row {
     height: 100%;
     margin: auto 6rem;
   }
   .header-left {
+    align-items: center;
+    display: flex;
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
     img {
       max-height: 20px;
     }
@@ -56,26 +56,47 @@ const headerStyle = css`
       margin: 0 20px;
     }
   }
+  @media (max-width: 425px){
+    .row {
+      margin: 0;
+    }
+    .header-left {
+      width: 50%;
+    }
+    .header-right {
+      width: 50%;
+      a {
+        margin: 0;
+      }
+    }
+  }
 `;
 
 const landingStyle = css`
-  height: 32rem;
-  padding: 0;
   background-image: url(${background});
   background-size: cover;
-
+  height: 32rem;
+  padding: 0;
   .hero-overlay {
-    height: 100%;
     background: rgb(240,239,231);
     background: linear-gradient(90deg, rgba(240,239,231,1) 0%, rgba(240,239,231,1) 50%, rgba(255,255,255,0) 100%); 
+    height: 100%;
     z-index: -1;
   }
-
+  @media (max-width: 425px){
+    .hero-overlay {
+      display: none;
+    }
+  }
 `;
 
 const titleCardContainer = css`
-  position: absolute;
   margin: 8rem 6rem 0;
+  position: absolute;
+  @media (max-width: 425px){
+    margin: 0;
+    position: relative;
+  }
 `;
 
 const titleCardStyle = css `
@@ -103,7 +124,6 @@ const titleCardStyle = css `
         margin: 10px 20px;
     }
   }
-
   .subtitle-card-bg {
     position: absolute;
     min-width: 47rem;
@@ -112,7 +132,6 @@ const titleCardStyle = css `
     background: white;
     z-index: 1;
   }
-
   .subtitle-card-text {
     position: absolute;
     min-width: 47rem;
@@ -142,10 +161,43 @@ const titleCardStyle = css `
         }
     }
   }
+  @media (max-width: 425px){
+    .title-card {
+      margin: 55vh 0 0 0;
+      max-width: 94vw;
+      min-width: 0;
+      padding: 1.5rem 0;
+      position: relative;
+      h1 {
+        font-size: 65px;
+      }
+    }
+    .subtitle-card-bg {
+      margin: 0;
+      min-height: 11rem;
+      min-width: 0;
+      position: absolute;  
+      width: 94%;
+    }
+    .subtitle-card-text {
+      margin: -1rem 0 0 1rem;
+      min-width: 0;
+      position: relative;  
+      ul {
+        margin: 0;
+        min-width: 0;
+      }
+      ul > li {
+        // font-size: 20px;
+      }
+    }
+  }
 `;
 
 const layoutStyle = css`
-
+  @media (max-width: 425px) {
+    padding: 1rem; 
+  }  
 `;
 
 const aboutStyle = css`
@@ -178,6 +230,15 @@ const aboutStyle = css`
       font-size: 16px;
     }
   }
+  @media (max-width: 425px) {
+    padding-top: 36rem;
+    .line {
+      display: none;
+    }
+    .about-content {
+      padding: 1rem;
+    }
+  }
 `;
 
 const sectionStyle1 = css`
@@ -188,7 +249,6 @@ const sectionStyle1 = css`
   
   .row {
     width: 100vw;
-    // --bs-gutter-x: none;
   }
 
   .section-content {
@@ -215,10 +275,6 @@ const sectionStyle1 = css`
       width: 100%;
       list-style: none;
       margin-bottom: 4rem;
-    }
-
-    .accordion {
-      
     }
 
     .accordion-item .accordion-button {
@@ -256,7 +312,18 @@ const sectionStyle1 = css`
         margin-right: 3rem;
       }
     }
-
+    @media (max-width: 425px) {
+      padding: 1rem;
+      width: 100%;
+      flex: none;
+      .col {
+        flex: none;
+      }
+      ul {
+        margin: 0;
+        padding: 0 1rem;
+      }
+    }
   }
 
   .section-images {
@@ -268,7 +335,14 @@ const sectionStyle1 = css`
       // width: 30rem;
       width: 100%;
     }
-
+    @media (max-width: 425px) {
+      flex: none;
+      padding: 1rem;
+      width: 100%;
+      .col {
+        flex: none;
+      }
+    }
   }
 `;
 
@@ -281,10 +355,8 @@ const liTitle = css`
 const sectionStyle2 = css`
   width: 100vw;
   height: auto;
-  // margin: 10rem 14rem;
   padding: 0;
   position: relative;
-
   .section-content-2 {
     h3 {
       font-size: 44px;
@@ -297,7 +369,25 @@ const sectionStyle2 = css`
       font-family: ${fonts.swiftNeueLtPro};
     }
   }
-    
+  @media (min-width: 426px) {
+    #mobile {
+      display: none;
+    }
+  }
+  @media (max-width: 425px) {
+    .section-content-2 {
+      h3 {
+        margin: 0;
+        padding: 1rem;
+      }
+    }
+    #desktop {
+      display: none;
+    }
+    #mobile {
+      display: block;
+    }
+  }
 `;
 
 const keyStyle = css`
@@ -334,19 +424,29 @@ const keyStyle = css`
   }
 `;
 
+const deckContainer = css`
+  @media (max-width: 425px) {
+    margin: 0 0 4rem;
+  }
+`;
+
 const deckText = css`
-height: auto;
-width: auto;
-padding: 6rem 14rem;
-background: linear-gradient(180deg, rgb(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.8) 75%, rgba(255,255,255,0) 100%); 
-h3 {
-  font-weight: 300;
-  margin: 0 0 24px;
-}
-p {
-  font-family: ${fonts.swiftNeueLtPro};
-  font-size: 16px;
-}
+  background: linear-gradient(180deg, rgb(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.8) 75%, rgba(255,255,255,0) 100%); 
+  height: auto;
+  padding: 6rem 14rem;
+  width: auto;
+  z-index: 2;
+  h3 {
+    font-weight: 300;
+    margin: 0 0 24px;
+  }
+  p {
+    font-family: ${fonts.swiftNeueLtPro};
+    font-size: 16px;
+  }
+  @media (max-width: 425px) {
+    padding: 0;
+  }
 `;
 
 const slideStyle = css`
@@ -355,6 +455,51 @@ const slideStyle = css`
     height: 100%;
     width: 100%;
     object-fit: contain;
+  }
+  @media (max-width: 425px) {
+    height: auto;
+    margin: 1rem 0;
+    width: 100%;
+  }
+`;
+
+
+
+const footerStyle = css`
+  #mobile {
+    background-color: rgba(3,51,45,1);
+    color: #ffffff;
+    display: none;
+    font-family: ${fonts.swiftNeueLtPro};
+    padding: 2rem 1rem 0;
+    .section {
+      padding-bottom: 2rem;
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .about {
+
+    }
+    .social {
+      display: flex;
+      img {
+        height: 2.2rem;
+        width: auto;
+      }
+    }
+  }
+  @media (max-width: 425px) {
+    #desktop {
+      display: none;
+    }
+    #mobile {
+      display: block;
+    }
   }
 `;
 
@@ -371,6 +516,8 @@ export {
   liTitle,
   sectionStyle2,
   keyStyle,
+  deckContainer,
   deckText,
-  slideStyle
+  slideStyle,
+  footerStyle
 };
