@@ -15,7 +15,12 @@ const Header = () => {
             <Container fluid css={headerStyle}>
                 <Row>
                     <Col className="header-left"><a href="/"><img src={logo} alt="MetroCommon by 2050" /></a></Col>
-                    <Col className="header-right"><a href="/"><a href="/" id="language-dropdown">English</a><List size={36} color="white" /></a></Col>
+                    <Col className="header-right">
+                        <a href="/">
+                            {/* <a href="/" id="language-dropdown">English</a> */}
+                            <List size={36} color="white" />
+                        </a>
+                    </Col>
                 </Row>
             </Container>
         </div>

@@ -55,7 +55,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1
+    items: 1  
   }
 };
 
@@ -76,19 +76,19 @@ class Key4 extends React.Component {
       <div>
         {/* Economy Deck */}
         <div css={css`
-          background-image: url(${economyBg}); 
+          // background-image: url(${economyBg}); 
           background-position: center; 
           background-size: cover;
+          height: auto;
+          @media (max-width: 425px) {
+            margin: 0;
+            padding: 0;
+          }
         `}>
           <div css={css`
-            :before {
-              background: #855F99;
-              content: '\A';
-              height: 100%;
-              opacity: 40%;
-              position: absolute;
-              width: 100%; 
-            }
+            // background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(133,95,153,0.5) 50%, rgba(133,95,153,0.5) 100%);
+            height: 100%;
+            width: 100%;
           `}>
             <div css={deckText}>
                 <h3>A Changing Economy</h3>
@@ -111,7 +111,6 @@ class Key4 extends React.Component {
                         ssr={false}
                         ref={el => (this.Carousel = el)}
                         partialVisbile={false}
-                        // customRightArrow={<CustomRightArrow />}
                         itemClass="slider-image-item"
                         responsive={responsive}
                         containerClass="carousel-container-with-scrollbar"
@@ -159,19 +158,19 @@ class Key4 extends React.Component {
         </div>
         {/* Travel Deck */}
         <div css={css`
-          background-image: url(${travelBg}); 
+          // background-image: url(${travelBg}); 
           background-position: center; 
           background-size: cover;
+          height: auto;
+          @media (max-width: 425px) {
+            margin: 0;
+            padding: 0;
+          }
         `}>
           <div css={css`
-            :before {
-              background: #48B062;
-              content: '\A';
-              height: 100%;
-              opacity: 40%;
-              position: absolute;
-              width: 100%; 
-            }
+            // background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(73,176,98,0.5) 50%, rgba(73,176,98,0.5) 100%);
+            height: 100%;
+            width: 100%;
           `}>
             <div css={deckText}>
                 <h3>The Future of Travel</h3>
@@ -242,27 +241,19 @@ class Key4 extends React.Component {
         </div>
         {/* Policy Deck */}
         <div css={css`
-          background-image: url(${policyBg}); 
+          // background-image: url(${policyBg}); 
           background-position: center; 
           background-size: cover;
-          :before {
-            background: red;
-            content: '\A';
-            height: 100%;
-            opacity: 40%;
-            position: absolute;
-            width: 100%; 
+          height: auto;
+          @media (max-width: 425px) {
+            margin: 0;
+            padding: 0;
           }
         `}>
           <div css={css`
-            :before {
-              background: #DA322A;
-              content: '\A';
-              height: 100%;
-              opacity: 40%;
-              position: absolute;
-              width: 100%; 
-            }
+            // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(218,50,43,1) 50%, rgba(218,50,43,1) 100%);
+            height: 100%;
+            width: 100%;
           `}>
             <div css={deckText}>
                 <h3>The Future of Federal Policy​</h3>
@@ -337,19 +328,19 @@ class Key4 extends React.Component {
         </div>
         {/* Demographics Deck */}
         <div css={css`
-          background-image: url(${demographicsBg}); 
+          // background-image: url(${demographicsBg}); 
           background-position: center; 
           background-size: cover;
+          height: auto;
+          @media (max-width: 425px) {
+            margin: 0;
+            padding: 0;
+          }
         `}>
           <div css={css`
-            :before {
-              background: #855F99;
-              content: '\A';
-              height: 100%;
-              opacity: 40%;
-              position: absolute;
-              width: 100%; 
-            }
+            // background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(133,96,153,0.5) 50%, rgba(133,96,153,0.5) 100%);
+            height: 100%;
+            width: 100%;
           `}>
             <div css={deckText}>
                 <h3>Demographic Change</h3>

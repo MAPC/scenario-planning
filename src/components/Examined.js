@@ -15,6 +15,7 @@ import Key2 from "./Key2";
 import Key3 from "./Key3";
 import Key4 from "./Key4";
 import WithScrollbar from "./WithScrollbar";
+import MobileCarousel from "./MobileCarousel";
 
 const Examined = () => {
     return (
@@ -23,7 +24,12 @@ const Examined = () => {
                 <div className="section-content-2">
                     <h3>Four Key Uncertainties Examined</h3>
                 </div>
-                <Key4 />
+                <div id="desktop">
+                    <Key4 />
+                </div>
+                <div id="mobile">
+                    <MobileCarousel />
+                </div>
             </div>
         </div>
     )
