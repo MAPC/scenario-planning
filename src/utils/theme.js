@@ -10,7 +10,7 @@ const fonts = {
 };
 
 const themeColors = {
-  purple: '#7A6CAE',
+  purple: '#855F99',
   indigo: '#101436',
   teal: '#4CC1B9',
   lightTeal: '#ebf6f7',
@@ -20,8 +20,8 @@ const themeColors = {
   black: '#000000',
   leaf: '#03332D',
   fontGray: '#545454',
-  orange: '#F3781F',
-  lightOrange: ''
+  red: '#DA322A',
+  orange: '#F3781F'
 };
 
 const headerStyle = css`
@@ -431,7 +431,7 @@ const deckContainer = css`
 `;
 
 const deckText = css`
-  background: linear-gradient(180deg, rgb(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.8) 75%, rgba(255,255,255,0) 100%); 
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5032387955182073) 30%, rgba(255,255,255,0) 100%);
   height: auto;
   padding: 6rem 14rem;
   width: auto;
@@ -463,7 +463,17 @@ const slideStyle = css`
   }
 `;
 
-
+const lastSlide = css`
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+  font-family: ${fonts.swiftNeueLtPro};
+  height: 100%;
+  justify-content: center;
+  .last-slide-copy {
+    padding: 6rem;
+  }
+`;
 
 const footerStyle = css`
   #mobile {
@@ -519,5 +529,6 @@ export {
   deckContainer,
   deckText,
   slideStyle,
+  lastSlide,
   footerStyle
 };

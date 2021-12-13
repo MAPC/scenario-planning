@@ -5,44 +5,35 @@ import { css, jsx } from '@emotion/react';
 import { 
   deckText, 
   slideStyle,
+  lastSlide,
   themeColors, 
   fonts } from "../utils/theme";
-import key3bg from "../assets/Image20@2x.png"
 import Carousel from "react-multi-carousel";
 import "../utils/WithScrollbar.css";
-import key3Data from "../utils/key3Data";
-import triangleRight from "../assets/triangle-right.svg";
-import triangleRightOrange from "../assets/triangle-right-orange@2x.png";
-import economyBg from "../assets/deck-backgrounds/mapc-skyline.jpeg";
-import travelBg from "../assets/deck-backgrounds/Traffic-heading-south-on-the-Southeast-Expressway_Credit-John-Wilcox.jpg";
-import policyBg from "../assets/deck-backgrounds/Credit_Alex_Koppelman_Dorchester_Quincy_Area_.jpg"
-import demographicsBg from "../assets/deck-backgrounds/Kendall_3.jpg";
-import triangleQuad from "../assets/Group-117@2x.png";
-import trafficGraphic from "../assets/Group-102@2x.png";
+import economyBg from "../assets/icons-bg-purple.svg";
+import travelBg from "../assets/icons-bg-green.svg";
+import policyBg from "../assets/icons-bg-red.svg";
+import demographicsBg from "../assets/icons-bg-indigo.svg";
 import economy1 from "../assets/key1/economy1.png";
 import economy2 from "../assets/key1/economy2.png";
 import economy3 from "../assets/key1/economy3.png";
 import economy4 from "../assets/key1/economy4.png";
 import economy5 from "../assets/key1/economy5.png";
-import economy6 from "../assets/key1/economy6.png";
 import travel1 from "../assets/key2/travel1.png";
 import travel2 from "../assets/key2/travel2.png";
 import travel3 from "../assets/key2/travel3.png";
 import travel4 from "../assets/key2/travel4.png";
 import travel5 from "../assets/key2/travel5.png";
-import travel6 from "../assets/key2/travel6.png";
-import policy1 from "../assets/key3/policy1.png";
+import policy1 from "../assets/key3/policy1.jpg";
 import policy2 from "../assets/key3/policy2.png";
 import policy3 from "../assets/key3/policy3.png";
 import policy4 from "../assets/key3/policy4.png";
 import policy5 from "../assets/key3/policy5.png";
-import policy6 from "../assets/key3/policy6.png";
 import demographics1 from "../assets/key4/demographics1.png";
 import demographics2 from "../assets/key4/demographics2.png";
 import demographics3 from "../assets/key4/demographics3.png";
 import demographics4 from "../assets/key4/demographics4.png";
 import demographics5 from "../assets/key4/demographics5.png";
-import demographics6 from "../assets/key4/demographics6.png";
 
 const responsive = {
   desktop: {
@@ -76,9 +67,9 @@ class Key4 extends React.Component {
       <div>
         {/* Economy Deck */}
         <div css={css`
-          // background-image: url(${economyBg}); 
+          background-image: url(${economyBg}); 
           background-position: center; 
-          background-size: cover;
+          background-repeat: repeat-y;
           height: auto;
           @media (max-width: 425px) {
             margin: 0;
@@ -86,7 +77,6 @@ class Key4 extends React.Component {
           }
         `}>
           <div css={css`
-            // background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(133,95,153,0.5) 50%, rgba(133,95,153,0.5) 100%);
             height: 100%;
             width: 100%;
           `}>
@@ -145,8 +135,10 @@ class Key4 extends React.Component {
                         <img src={economy5} alt="" />
                       </div>
                       {/* Slide 6 */}
-                      <div css={slideStyle}>
-                        <img src={economy6} alt="" />
+                      <div css={lastSlide} style={{color: themeColors.purple}}>
+                        <div className="last-slide-copy">
+                          <h1>Learn more about MAPC's research on the future of work <a href="https://www.mapc.org/planning101/the-future-of-work-data-and-policies-to-shape-greater-bostons-recovery/" target="_blank">here</a>.</h1>
+                        </div>
                       </div>
                       {/* blank final slide */}
                       <div class="image-container increase-size">
@@ -158,9 +150,9 @@ class Key4 extends React.Component {
         </div>
         {/* Travel Deck */}
         <div css={css`
-          // background-image: url(${travelBg}); 
+          background-image: url(${travelBg}); 
           background-position: center; 
-          background-size: cover;
+          background-repeat: repeat-y;
           height: auto;
           @media (max-width: 425px) {
             margin: 0;
@@ -168,7 +160,6 @@ class Key4 extends React.Component {
           }
         `}>
           <div css={css`
-            // background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(73,176,98,0.5) 50%, rgba(73,176,98,0.5) 100%);
             height: 100%;
             width: 100%;
           `}>
@@ -228,8 +219,10 @@ class Key4 extends React.Component {
                         <img src={travel5} alt="" />
                       </div>
                       {/* Slide 6 */}
-                      <div css={slideStyle}>
-                        <img src={travel6} alt="" />
+                      <div css={lastSlide} style={{color: themeColors.leaf}}>
+                        <div className="last-slide-copy">
+                          <h1>Learn more through MAPC's research on the <a href="https://www.mapc.org/wp-content/uploads/2021/02/Feb2021-Ecommerce-Report.pdf" target="_blank">impact of ecommerce</a>, <a href="https://www.mapc.org/resource-library/the-growing-carbon-footprint-of-ride-hailing-in-massachusetts/" target="_blank">TNC's</a>, and <a href="https://www.mapc.org/resource-library/autonomous-vehicles/" target="_blank">automated vehicle technology</a>.</h1>
+                        </div>
                       </div>
                       {/* blank final slide */}
                       <div class="image-container increase-size">
@@ -241,9 +234,9 @@ class Key4 extends React.Component {
         </div>
         {/* Policy Deck */}
         <div css={css`
-          // background-image: url(${policyBg}); 
+          background-image: url(${policyBg}); 
           background-position: center; 
-          background-size: cover;
+          background-repeat: repeat-y;
           height: auto;
           @media (max-width: 425px) {
             margin: 0;
@@ -251,7 +244,6 @@ class Key4 extends React.Component {
           }
         `}>
           <div css={css`
-            // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(218,50,43,1) 50%, rgba(218,50,43,1) 100%);
             height: 100%;
             width: 100%;
           `}>
@@ -315,8 +307,10 @@ class Key4 extends React.Component {
                         <img src={policy5} alt="" />
                       </div>
                       {/* Slide 6 */}
-                      <div css={slideStyle}>
-                        <img src={policy6} alt="" />
+                      <div css={lastSlide} style={{color: themeColors.red}}>
+                        <div className="last-slide-copy">
+                          <h1>Learn more about MAPC's research on <a href="https://climate-vulnerability.mapc.org/" target="_blank">climate vulnerability</a>, <a href="https://metrocommon.mapc.org/reports/17" target="_blank">sea level rise</a>, and <a href="https://www.mapc.org/get-involved/legislative-priorities/" target="_blank">legislative policy</a>.</h1>
+                        </div>
                       </div>
                       {/* blank final slide */}
                       <div class="image-container increase-size">
@@ -328,9 +322,9 @@ class Key4 extends React.Component {
         </div>
         {/* Demographics Deck */}
         <div css={css`
-          // background-image: url(${demographicsBg}); 
+          background-image: url(${demographicsBg}); 
           background-position: center; 
-          background-size: cover;
+          background-repeat: repeat-y;
           height: auto;
           @media (max-width: 425px) {
             margin: 0;
@@ -338,7 +332,6 @@ class Key4 extends React.Component {
           }
         `}>
           <div css={css`
-            // background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(133,96,153,0.5) 50%, rgba(133,96,153,0.5) 100%);
             height: 100%;
             width: 100%;
           `}>
@@ -397,8 +390,10 @@ class Key4 extends React.Component {
                         <img src={demographics5} alt="" />
                       </div>
                       {/* Slide 6 */}
-                      <div css={slideStyle}>
-                        <img src={demographics6} alt="" />
+                      <div css={lastSlide} style={{color: themeColors.indigo}}>
+                        <div className="last-slide-copy">
+                          <h1>Read more about our research on demographics and scenarios for the future <a href="https://mapc365.sharepoint.com/:w:/s/MetroCommon2050Team/EQFrxK91iipPiSUZOvhQJEABWnw_H_CN_hy4KmSQ2cEf8A?e=hVSiHP" target="_blank">here</a>.</h1>
+                        </div>
                       </div>
                       {/* blank final slide */}
                       <div class="image-container increase-size">
