@@ -15,8 +15,6 @@ const Header = () => {
             <Container fluid css={headerStyle}>
                 <Row>
                     <Col className="header-left"><a href="https://metrocommon.mapc.org/" target="_blank"><img src={logo} alt="MetroCommon by 2050" /></a></Col>
-                    {/* <Col className="header-right">
-                    </Col> */}
                 </Row>
             </Container>
         </div>

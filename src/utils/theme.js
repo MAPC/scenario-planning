@@ -77,6 +77,9 @@ const landingStyle = css`
   background-size: cover;
   height: 32rem;
   padding: 0;
+  .row { 
+    margin: 0;
+  }
   .hero-overlay {
     background: rgb(240,239,231);
     background: linear-gradient(90deg, rgba(240,239,231,1) 0%, rgba(240,239,231,1) 50%, rgba(255,255,255,0) 100%); 
@@ -91,6 +94,20 @@ const landingStyle = css`
 `;
 
 const titleCardContainer = css`
+  .mobile {
+    display: none;
+  }
+  @media (max-width: 425px) {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+  }
+`;
+
+const titleCardDesktopContainer = css`
   margin: 8rem 6rem 0;
   position: absolute;
   @media (max-width: 425px){
@@ -149,6 +166,8 @@ const titleCardStyle = css `
         text-transform: uppercase;
         list-style: none;
         z-index: 3;
+        // text-indent: -70px;
+        // margin-left: 65px;
     }
     > ul > li {
         margin: 8px 0;
@@ -161,35 +180,66 @@ const titleCardStyle = css `
         }
     }
   }
-  @media (max-width: 425px){
-    .title-card {
-      margin: 55vh 0 0 0;
-      max-width: 94vw;
-      min-width: 0;
-      padding: 1.5rem 0;
-      position: relative;
-      h1 {
+`;
+
+const titleCardStyleMobile = css`
+  padding: 0;
+  .title-card {
+    position: relative;
+    min-width: 0;
+    max-width: 94vw;
+    margin: 62vh 0 0 0;
+    padding: 1.5rem 0;
+    color: white;
+    background: ${themeColors.leaf};
+    z-index: 2;
+    > h1 {
         font-size: 65px;
-      }
+        font-family: ${fonts.calibre};
+        font-weight: 200;
+        padding: 0;
+        margin: 0;
     }
-    .subtitle-card-bg {
-      margin: 0;
-      min-height: 11rem;
-      min-width: 0;
-      position: absolute;  
-      width: 94%;
+    > h3 {
+        font-size: 20px;
+        font-family: ${fonts.calibre};
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 10px 20px;
     }
-    .subtitle-card-text {
-      margin: -1rem 0 0 1rem;
-      min-width: 0;
-      position: relative;  
-      ul {
+  }
+  .subtitle-card-text {
+    background-color: white;
+    color: black;
+    margin: 0;
+    min-width: 0;
+    padding: 1rem;
+    position: relative;  
+    z-index: 2;
+    > ul {
+        font-size: 14px;
+        font-family: ${fonts.calibre};
+        font-weight: 400;
+        letter-spacing: 2px;
+        list-style: none;
         margin: 0;
         min-width: 0;
-      }
-      ul > li {
-        // font-size: 20px;
-      }
+        padding: 0;
+        text-transform: uppercase;
+        z-index: 3;
+        text-indent: -70px;
+        margin-left: 65px;
+    }
+    > ul > li {
+        margin: 8px 0;
+        img.triangle {
+          width: 20px;
+        }
+        img.dots {
+          height: 2px;
+          margin-right: 8px;
+        }
     }
   }
 `;
@@ -231,7 +281,7 @@ const aboutStyle = css`
     }
   }
   @media (max-width: 425px) {
-    padding-top: 36rem;
+    padding-top: 46rem;
     .line {
       display: none;
     }
@@ -473,6 +523,14 @@ const lastSlide = css`
   .last-slide-copy {
     padding: 6rem;
   }
+  @media (max-width: 425px) {
+    h1 {
+      font-size: 18px;
+    }
+    .last-slide-copy {
+      padding: 0;
+    }
+  }
 `;
 
 const footerStyle = css`
@@ -519,7 +577,9 @@ export {
   headerStyle, 
   landingStyle, 
   titleCardContainer, 
+  titleCardDesktopContainer,
   titleCardStyle, 
+  titleCardStyleMobile,
   layoutStyle, 
   aboutStyle, 
   sectionStyle1, 
