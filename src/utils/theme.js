@@ -37,7 +37,7 @@ const headerStyle = css`
     align-items: center;
     display: flex;
     height: 100%;
-    margin: 0;
+    margin-left: 6rem;
     padding: 0;
     img {
       max-height: 20px;
