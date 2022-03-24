@@ -27,6 +27,8 @@ const themeColors = {
 const headerStyle = css`
   background-color: ${themeColors.leaf};
   height: 120px;
+  position: fixed;
+  z-index: 5;
   .row {
     height: 100%;
     margin: auto 6rem;
@@ -75,7 +77,7 @@ const headerStyle = css`
 const landingStyle = css`
   background-image: url(${background});
   background-size: cover;
-  height: 32rem;
+  height: 31.75rem;
   padding: 0;
   .row { 
     margin: 0;
@@ -108,7 +110,7 @@ const titleCardContainer = css`
 `;
 
 const titleCardDesktopContainer = css`
-  margin: 8rem 6rem 0;
+  margin: 10rem 6rem 0;
   position: absolute;
   @media (max-width: 425px){
     margin: 0;
@@ -166,8 +168,6 @@ const titleCardStyle = css `
         text-transform: uppercase;
         list-style: none;
         z-index: 3;
-        // text-indent: -70px;
-        // margin-left: 65px;
     }
     > ul > li {
         margin: 8px 0;
@@ -253,8 +253,8 @@ const layoutStyle = css`
 const aboutStyle = css`
   width: 100%;
   margin: 0;
-  padding-top: 12rem;
   height: auto;
+  padding-top: 10rem;
   position: relative;
   color: ${themeColors.white};
   background: ${themeColors.leaf};
@@ -266,7 +266,7 @@ const aboutStyle = css`
   }
 
   .about-content {
-    padding: 0 22rem 4rem;
+    padding: 0 22rem 7rem;
     h3 {
       font-size: 24px;
       font-family: ${fonts.calibre};
@@ -303,7 +303,7 @@ const sectionStyle1 = css`
 
   .section-content {
     width: 80%;
-    padding: 10rem 4rem 0 14rem;
+    padding: 7rem 4rem 0 14rem;
     
     h3 {
       font-size: 44px;
@@ -342,7 +342,6 @@ const sectionStyle1 = css`
       color: ${themeColors.black};
       background-color: ${themeColors.lightTeal};
       padding: 18px 1.25rem;
-      // transition: all 0.2s ease-in-out;
     }
 
     .accordion-button:not(.collapsed):after {
@@ -378,12 +377,10 @@ const sectionStyle1 = css`
 
   .section-images {
     width: 10%;
-    padding: 5rem 0;
+    padding: 5rem 0 0;
     overflow: hidden;
-
     .triangle-large {
-      // width: 30rem;
-      width: 100%;
+      max-height: 80%;
     }
     @media (max-width: 425px) {
       flex: none;
@@ -412,7 +409,7 @@ const sectionStyle2 = css`
       font-size: 44px;
       font-weight: 300;
       letter-spacing: 1.5px;
-      margin: 10rem 0 2rem 14rem;
+      margin: 3rem 0 2rem 14rem;
     }
 
     p {
@@ -441,7 +438,6 @@ const sectionStyle2 = css`
 `;
 
 const keyStyle = css`
-  height: 100vh;
   width: 100%;
   display: flex;
 
@@ -467,7 +463,6 @@ const keyStyle = css`
     height: 5rem;
   }
 
-  // targets color of indicator buttons
   .carousel-indicators [data-bs-target] {
     height: 6px;
     background-color: ${themeColors.leaf};
@@ -483,7 +478,7 @@ const deckContainer = css`
 const deckText = css`
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5032387955182073) 30%, rgba(255,255,255,0) 100%);
   height: auto;
-  padding: 6rem 14rem;
+  padding: 2rem 14rem;
   width: auto;
   z-index: 2;
   h3 {
@@ -494,13 +489,15 @@ const deckText = css`
     font-family: ${fonts.swiftNeueLtPro};
     font-size: 16px;
   }
+  li {
+    font-family: ${fonts.swiftNeueLtPro};
+  }
   @media (max-width: 425px) {
     padding: 0;
   }
 `;
 
 const slideStyle = css`
-  height: 100vh;
   img {
     height: 100%;
     width: 100%;

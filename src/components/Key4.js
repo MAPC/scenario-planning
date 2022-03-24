@@ -54,15 +54,6 @@ class Key4 extends React.Component {
   state = { additionalTransfrom: 0 };
   render() {
 
-    // const CustomRightArrow = ({ onClick, ...rest }) => {
-    //   const {
-    //     onMove,
-    //     carouselState: { currentSlide, deviceType }
-    //   } = rest;
-    //   // onMove means if dragging or swiping in progress.
-    //   return <button onClick={() => onClick()} />;
-    // }; 
-
     return (
       <div>
         {/* Economy Deck */}
@@ -87,7 +78,6 @@ class Key4 extends React.Component {
                 <p>Remembering that our economy is based on workers reminds us of the importance of housing and transportation as ways to grow the economy. Ultimately, the region's available labor force will impact how many jobs our region can hold.</p>
             </div>
             <div css={css`
-                height: 100vh;
                 width: 100vw;
                 overflow: hidden;
             `}>
@@ -171,7 +161,6 @@ class Key4 extends React.Component {
                 <p>Similarly, the COVID 19 pandemic has demonstrated that disruptions can also drastically reduce the need for travel. Remote work, remote school, telemedicine, and virtual parties have all allowed people to do many things without leaving their home. Certainly some—though not all—of these trends will continue after the pandemic, especially as communication technology improves and virtual reality closes the gap between virtual and in-person interaction.</p>
             </div>
             <div css={css`
-                height: 100vh;
                 width: 100vw;
                 overflow: hidden;
             `}>
@@ -259,7 +248,6 @@ class Key4 extends React.Component {
                 </ol>
             </div>
             <div css={css`
-                height: 100vh;
                 width: 100vw;
                 overflow: hidden;
             `}>
@@ -342,7 +330,6 @@ class Key4 extends React.Component {
                 <p>For example, Baby Boomers still comprise a substantial share of the region’s workforce and homeowners, but over the coming decades they will be entering new life stages. By 2050, all members of the Baby Boomer generation will be over 85 years old. While we don’t know exactly when or how many Boomers will move out of the region, pass away, or retire, we know enough to begin estimating how their changing needs for housing, income, and services may create both challenges and opportunities for the region. For example, we can predict with some certainty that there will be a large, if gradual, exodus from the workforce. We can predict there will be a greater number of older adults in need of transportation services and a larger number of homeowners on fixed incomes.</p>
             </div>
             <div css={css`
-                height: 100vh;
                 width: 100vw;
                 overflow: hidden;
             `}>

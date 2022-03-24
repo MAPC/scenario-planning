@@ -54,8 +54,6 @@ button {
 .react-multiple-carousel__arrow {
   border-radius: 0;
   background: none;
-  /* min-height: 80px;
-  min-width: 80px; */
   width: 200px;
   height: 200px;
   opacity: 0.5;
@@ -65,7 +63,6 @@ button {
   background: none;
   opacity: 1;
   width: 160px;
-  /* height: 220px; */
   transition: ease-in-out 0.4s all;
 }
 

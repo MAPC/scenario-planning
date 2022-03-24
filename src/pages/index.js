@@ -7,10 +7,6 @@ import Landing from '../components/Landing';
 import About from '../components/About';
 import Takeaways from '../components/Takeaways';
 import Examined from '../components/Examined';
-import Goals from '../components/Goals';
-import Slides from '../components/Slides';
-import Banner from '../components/Banner';
-import Main from '../components/Main';
 import FooterComponent from '../components/Footer';
 
 const IndexPage = () => {
@@ -19,6 +15,7 @@ const IndexPage = () => {
       <style jsx global>{`
       body {
         margin: 0px;
+        overflow-x: hidden;
         padding: 0px;
       }
     `}</style>
@@ -26,10 +23,6 @@ const IndexPage = () => {
       <About />
       <Takeaways />
       <Examined />
-      {/* <Slides /> */}
-      {/* <Goals /> */}
-      {/* <Banner /> */}
-      {/* <Main /> */}
       <FooterComponent />
     </main>
   )

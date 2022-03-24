@@ -22,7 +22,7 @@ const Takeaways = () => {
                     <h3>Key Takeaways from Engagement</h3>
                     <p>Over the course of the MetroCommon planning effort we engaged people in the region to better understand what it means to be ready for uncertainty. Our discussions led to <span className="teal-text">four main takeaways</span> to better plan for policy and action.</p>
                     <ul>
-                        <Accordion flush bsPrefix="accordion">
+                        <Accordion flush bsPrefix="accordion" defaultActiveKey="0">
                             <Accordion.Item eventKey="0" bsPrefix="accordion-item">
                                 <Accordion.Header bsPrefix="accordion-header"><p>Centering equity is not only important to eliminate existing disparities, it makes the region stronger and more resilient in the long-run</p></Accordion.Header>
                                 <Accordion.Body>
@@ -53,7 +53,7 @@ const Takeaways = () => {
                     </ul>
                 </Col>
                 <Col className="section-images">
-                    <img src={triangleQuadrant} alt="Notecards, gathering of people, light teal triangle, dark teal triangle" />
+                    <img src={triangleQuadrant} className="triangle-large" alt="Notecards, gathering of people, light teal triangle, dark teal triangle" />
                 </Col>
                 </Row>
             </Container>

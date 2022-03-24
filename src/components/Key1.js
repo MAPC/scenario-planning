@@ -18,7 +18,7 @@ const Key1 = () => {
     return(
         <div css={keyStyle}>
             <div css={css`background-image: url(${key1bg});
-            height: 100%;
+            // height: 100%;
             width: 100%;
             display: flex;
             align-items: center;`}>
@@ -27,13 +27,8 @@ const Key1 = () => {
         interval={null}
         bsPrefix="carousel">
             <Carousel.Item bsPrefix="carousel-item">
-                {/* <img
-                className="d-block w-100"
-                src={demographics0}
-                alt="First slide"
-                /> */}
                 <div css={css`
-                height: 100%;
+                // height: 100%;
                 width: 100%;
                 background-color: ${themeColors.leaf};
                 color: ${themeColors.white};
@@ -46,65 +41,30 @@ const Key1 = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                {/* <img
-                className="d-block w-100"
-                src={demographics0}
-                alt="Second slide"
-                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                {/* <img
-                className="d-block w-100"
-                src={demographics1}
-                alt="Third slide"
-                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                {/* <img
-                className="d-block w-100"
-                src={demographics2}
-                alt="Fourth slide"
-                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                {/* <img
-                className="d-block w-100"
-                src={demographics3}
-                alt="Fifth slide"
-                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                {/* <img
-                className="d-block w-100"
-                src={demographics4}
-                alt="Third slide"
-                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                {/* <img
-                className="d-block w-100"
-                src={demographics5}
-                alt="Third slide"
-                /> */}
                 <Carousel.Caption>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                {/* <img
-                className="d-block w-100"
-                src={demographics6}
-                alt="Third slide"
-                /> */}
                 <Carousel.Caption>
                     <h3>Last Slide</h3>
                 </Carousel.Caption>
