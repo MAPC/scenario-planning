@@ -1230,10 +1230,10 @@
     "core-js-pure" "^3.16.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.13.16", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.8", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
-  "integrity" "sha512-OvwMLqNXkCXSz1kSm58sEsNuhqOx/fKpnUnKnFB5v8uDda5bLNEHNgKPvhDN6IU0LDcnHQ90LlJ0Q6jnyBSIBA=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.15.3.tgz"
-  "version" "7.15.3"
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.13.16", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+  "integrity" "sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA=="
+  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.17.8.tgz"
+  "version" "7.17.8"
   dependencies:
     "regenerator-runtime" "^0.13.4"
 
@@ -7486,6 +7486,14 @@
     "@babel/runtime" "^7.14.8"
     "@emotion/babel-preset-css-prop" "^11.2.0"
 
+"gatsby-plugin-google-gtag@^4.10.0":
+  "integrity" "sha512-RnhD25M+v2DzBCxxd0hrJ5ki32Rk4mm8973+9J6ukyk+3u/ym5nvjj47qzMVaYx9bbvs03Py1v27TsbBouwhPg=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.10.0.tgz"
+  "version" "4.10.0"
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "minimatch" "^3.0.4"
+
 "gatsby-plugin-page-creator@^3.12.0":
   "integrity" "sha512-SOEkRp2VY++Tt/vRr7WvHHEyDolXTN1Yodabsjs/OvvG0txL+Sq0hKYQNuPSRHucJY8wNCNOIN/5jsn0FTtAGA=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-3.12.0.tgz"
@@ -7619,7 +7627,7 @@
   dependencies:
     "@babel/core" "^7.14.8"
 
-"gatsby@^3.0.0-next.0", "gatsby@^3.12.1":
+"gatsby@^3.0.0-next.0", "gatsby@^3.12.1", "gatsby@^4.0.0-next":
   "integrity" "sha512-Z2lh2EB8Oh68JHImnlHpqgivAKQ81CYNA9faMgQM/okvF0n5Zrb8/1cKb1VuEwwbjhwZjLAlCQAIZ79vs7IHDg=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-3.12.1.tgz"
   "version" "3.12.1"
